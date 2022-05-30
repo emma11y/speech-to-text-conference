@@ -398,7 +398,20 @@ button {
 }
 
 .icon {
-  color: #008dc4;
+  color: #171745;
+}
+
+.tool-bar-elt {
+  border: #fff 1px transparent;
+}
+
+.tool-bar-elt:hover,
+.tool-bar-elt:focus {
+  border: #fff 1px solid !important;
+}
+
+.tool-bar-elt .icon {
+  color: white;
 }
 
 /*.high-c .icon{
@@ -2226,13 +2239,14 @@ select {
   appearance: none;
   color: #444;
   margin: 0;
-  background-color: #008dc4;
+  background-color: #171745;
   color: #fff;
 }
 
 .high-c select {
   background-color: #f2f3f4;
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .custom-select {
@@ -2250,7 +2264,7 @@ select {
 }
 
 .custom-select::before {
-  background-color: #008dc4;
+  background-color: #171745;
   width: 2em;
   right: 0;
   top: 0;
@@ -2268,7 +2282,7 @@ select {
 }
 
 .custom-select::after {
-  color: rgba(0, 0, 0, 0.4);
+  color: #fff;
   content: "\25BC";
   height: 1em;
   font-size: 0.625em;
@@ -2279,7 +2293,7 @@ select {
 }
 
 .high-c .custom-select::after {
-  color: #fff;
+  color: #131516;
 }
 
 .inv-c .custom-select::after {
@@ -2882,9 +2896,9 @@ label[for="contrastSelect"] {
 
 .btn-setting {
   /* Save & Default button*/
-  background-color: #008dc4;
+  background-color: #171745;
   color: #fff;
-  border: 0;
+  border: 1px solid #fff;
   padding: 15px; /*color:var(--font-alt);*/ /*	border-radius:5px;*/
   font-size: 100%;
   display: table-cell;
@@ -2892,13 +2906,21 @@ label[for="contrastSelect"] {
   font-family: "AmpleSoft", Verdana, sans-serif;
 }
 
+.btn-setting:hover,
+.btn-setting:focus {
+  background-color: white !important;
+  color: #171745;
+  border: 1px solid #171745;
+}
+
 .inv-c .btn-setting {
   border-top: 1px solid #ff0;
 }
 
-.high-c .btn-setting {
-  background-color: #f2f3f4;
-  color: #fff;
+.high-c .btn-setting:focus,
+.high-c .btn-setting:hover {
+  background-color: #131516 !important;
+  border-color: #fff;
 }
 
 .btn-group-settings .btn-setting:first-child {
@@ -5502,4 +5524,30 @@ fieldset {
 
 .dcube-text-center {
   text-align: center;
+}
+
+.dcube-quote::before {
+  content: open-quote;
+  font-size: 2em;
+  color: #00587b;
+  line-height: 0;
+  vertical-align: sub;
+}
+
+.dcube-quote::after {
+  content: close-quote;
+  font-size: 2em;
+  color: #00587b;
+  line-height: 0;
+  vertical-align: sub;
+}
+
+.inv-c .dcube-quote::before,
+.inv-c .dcube-quote::after {
+  color: #ff0;
+}
+
+.high-c .dcube-quote::before,
+.high-c .dcube-quote::after {
+  color: #fff;
 }
