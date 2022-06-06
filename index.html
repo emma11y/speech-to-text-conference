@@ -118,9 +118,7 @@
               src="img_slide/dcube/logo_dcube_bleu.png"
               id="logo"
               role="img"
-              aria-label="DCube"
-              width="58"
-              height="43"
+              aria-label="Logo de DCube"
             />
           </a>
         </header>
@@ -225,12 +223,12 @@
                   <button
                     class="dcube-btn dcube-btn-toggle"
                     aria-expanded="false"
-                    aria-controls="traduction-1"
+                    aria-controls="transcription-1"
                   >
-                    Traduction
+                    Ce qui doit être normalement transcrit
                   </button>
                   <div
-                    id="traduction-1"
+                    id="transcription-1"
                     class="content-to-toggle is-hidden dcube-text-small center"
                   >
                     <p>
@@ -255,10 +253,820 @@
             <div class="inside dcube-align-center center">
               <div class="dcube-block">
                 <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
-                  <span class="dcube-text-reinit dcube-item-block">Titre</span>
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Mon expérience</span
+                  >
                   <span class="sr"> </span>
                 </h2>
               </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Un peu de technique</span
+                  >
+                  <span class="sr"> </span>
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-bgcolor-c2">
+                <div class="dcube-grid">
+                  <h3 class="dcube-subtitle">Deepgram</h3>
+                  <div class="dcube-margin-t15">
+                    <ul>
+                      Pour utiliser Deepgram Speech-To-Text API :
+                      <li style="margin-top: 10px">
+                        Créer un compte (150 $ de crédit gratuit)
+                      </li>
+                      <li>Créer la clé API pour réaliser des requêtes</li>
+                      <li>
+                        SDK disponible en Node.js, Python, .NET, Deno et Go
+                      </li>
+                    </ul>
+
+                    <div
+                      class="dcube-text-tiny dcube-border-t1 dcube-border-c4"
+                    >
+                      <p>
+                        Site :
+                        <a
+                          href="https://deepgram.com/product/speech-to-text-api-overview/"
+                          title="Consultez le site (nouvelle fenêtre)"
+                          target="_blank"
+                          >https://deepgram.com/product/speech-to-text-api-overview/</a
+                        >
+                      </p>
+
+                      <p>
+                        Code source en Node.js :
+                        <a
+                          href="https://github.com/deepgram/deepgram-node-sdk"
+                          title="Consultez la documentation avec Node.js (nouvelle fenêtre)"
+                          target="_blank"
+                          >https://github.com/deepgram/deepgram-node-sdk</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <div class="dcube-code">
+                    <pre>
+                      <code>                        
+      navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+        this.mediaRecorder = new MediaRecorder(stream, {
+          mimeType: 'audio/webm',
+        });
+
+        const liveTranscriptionOptions: LiveTranscriptionOptions = {
+          language: 'fr',
+          version: 'latest',
+          interim_results: true,
+        };
+
+        this.socket = new WebSocket('wss://api.deepgram.com/v1/listen?' + queryString.stringify(liveTranscriptionOptions), ['token', 'apiKey']);
+
+        this.socket.onopen = () => {
+          this.mediaRecorder.addEventListener('dataavailable', async (event) => {
+            if (event.data.size > 0 && this.socket.readyState === 1) {
+              this.socket.send(event.data);
+            }
+          });
+
+          this.mediaRecorder.start(0.25);
+        };
+
+        this.socket.onmessage = (message) => {
+          const data = JSON.parse(message.data);
+
+          if (data.start !== this.start) {
+            this.start = data.start;
+          }
+
+          this.transcript = data.channel.alternatives[0].transcript;
+        };
+      });
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-bgcolor-c2">
+                <div class="dcube-grid">
+                  <h3 class="dcube-subtitle">Google</h3>
+                  <div class="dcube-margin-t15">
+                    <div
+                      class="dcube-text-tiny dcube-border-t1 dcube-border-c4"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <div class="dcube-code">
+                    <pre>
+                      <code>                        
+
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-bgcolor-c2">
+                <div class="dcube-grid">
+                  <h3 class="dcube-subtitle">Microsoft</h3>
+                  <div class="dcube-margin-t15">
+                    <div
+                      class="dcube-text-tiny dcube-border-t1 dcube-border-c4"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <div class="dcube-code">
+                    <pre>
+                      <code>                        
+
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-bgcolor-c2">
+                <div class="dcube-grid">
+                  <h3 class="dcube-subtitle">Mozilla</h3>
+                  <div class="dcube-margin-t15">
+                    <div
+                      class="dcube-text-tiny dcube-border-t1 dcube-border-c4"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <div class="dcube-code">
+                    <pre>
+                      <code>                        
+
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block">Démos</span>
+                  <span class="sr"> </span>
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-flex">
+                <div class="grid">
+                  <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                    Démo 1 : Samuel
+                  </h3>
+                  <div class="dcube-video">
+                    <video controls>
+                      <source src="videos/francetvlab.mp4" type="video/mp4" />
+
+                      Sorry, your browser doesn't support embedded videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-flex">
+                <div class="grid">
+                  <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                    Démo 2 : Duchesse
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-flex">
+                <div class="grid">
+                  <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                    Démo 3 : Emmanuelle
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block">Biais</span>
+                  <span class="sr"> </span>
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block">
+                  <h3
+                    class="dcube-subtitle"
+                    style="
+                      position: absolute;
+                      top: 10%;
+                      left: 0;
+                      width: 100%;
+                      text-align: center;
+                    "
+                  >
+                    Biais du genre
+                  </h3>
+                  <p class="dcube-quote dcube-margin-t15" lang="en">
+                    YouTube’s auto captions consistently performed better on
+                    male voices than female voice.
+                  </p>
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    Source :
+                    <a
+                      href="https://makingnoiseandhearingthings.com/2016/07/12/googles-speech-recognition-has-a-gender-bias/"
+                      target="new"
+                      title="Google's speech recognition has a gender biais
+                        (EN) - Nouvelle fenêtre"
+                    >
+                      <span lang="en"
+                        >Google's speech recognition has a gender biais
+                        (EN)</span
+                      >, article écrit en 2016 puis édité en 2020</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <p class="dcube-quote" lang="en">
+                    Why does this bias exist ? (...) The underlying reason may
+                    be that databases have lots of white male data, and less
+                    data on female and minority voices. For example, TED Talks
+                    are frequently analyzed by speech scientists, and 70% of TED
+                    speakers are male.
+                  </p>
+
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    Source :
+                    <a
+                      href="https://hbr.org/2019/05/voice-recognition-still-has-significant-race-and-gender-biases"
+                      title="Voice recognition still significant race and gender
+                        biases (EN) - Nouvelle fenêtre"
+                      target="new"
+                    >
+                      <span lang="en"
+                        >Voice recognition still significant race and gender
+                        biases</span
+                      >
+                      (EN), article écrit en 2019</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-bgcolor-c2 dcube-page-border dcube-border-c0"
+          >
+            <div class="inside dcube-align-center">
+              <div class="dcube-block dcube-block-super center">
+                <h4>
+                  <a
+                    href="https://commonvoice.mozilla.org/"
+                    title="Common Voice - nouvelle fenêtre"
+                    target="_blank"
+                    ><span lang="en">Common Voice</span></a
+                  >
+                </h4>
+
+                <table>
+                  <caption>
+                    <a
+                      href="https://commonvoice.mozilla.org/fr/datasets"
+                      target="_new"
+                      title="Datasets des voix pour la langue française"
+                      >Datasets des voix pour la langue française</a
+                    >
+                  </caption>
+
+                  <tr>
+                    <th scope="col">Version</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Nombre de voix</th>
+                    <th scope="col">Répartition de voix masculines *</th>
+                    <th scope="col">Répartition de voix féminines *</th>
+                  </tr>
+                  <tr>
+                    <td>1.0</td>
+                    <td>25/02/2019</td>
+                    <td>1 697</td>
+                    <td>72%</td>
+                    <td>7%</td>
+                  </tr>
+                  <tr>
+                    <td>2.0</td>
+                    <td>11/06/2019</td>
+                    <td>2 985</td>
+                    <td>70%</td>
+                    <td>9%</td>
+                  </tr>
+
+                  <tr>
+                    <td>3.0</td>
+                    <td>24/06/2019</td>
+                    <td>3 005</td>
+                    <td>70%</td>
+                    <td>9%</td>
+                  </tr>
+                  <tr>
+                    <td>4.0</td>
+                    <td>10/12/2019</td>
+                    <td>8 164</td>
+                    <td>65%</td>
+                    <td>12%</td>
+                  </tr>
+                  <tr>
+                    <td>5.1</td>
+                    <td>22/06/2020</td>
+                    <td>11 960</td>
+                    <td>65%</td>
+                    <td>11%</td>
+                  </tr>
+                  <tr>
+                    <td>6.1</td>
+                    <td>11/12/2020</td>
+                    <td>12 953</td>
+                    <td>65%</td>
+                    <td>10%</td>
+                  </tr>
+                  <tr>
+                    <td>7.0</td>
+                    <td>21/07/2021</td>
+                    <td>15 391</td>
+                    <td>63%</td>
+                    <td>11%</td>
+                  </tr>
+                  <tr>
+                    <td>8.0</td>
+                    <td>19/01/2022</td>
+                    <td>16 082</td>
+                    <td>62%</td>
+                    <td>11%</td>
+                  </tr>
+                  <tr>
+                    <td>9.0</td>
+                    <td>27/04/2022</td>
+                    <td>16 291</td>
+                    <td>62%</td>
+                    <td>10%</td>
+                  </tr>
+                </table>
+                <p class="dcube-text-micro dcube-text-right">
+                  * Le reste des voix proviennent des voix anonymes
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <p class="center" style="font-size: 3em">Chaque voix compte.</p>
+                <p class="center">Y compris :</p>
+                <ul>
+                  <li>celles des femmes</li>
+                  <li>celles des personnes issues de la minorité</li>
+                  <li>celles des personnes ayant des accents</li>
+                  <li>
+                    celles des personnes ayant des voix atypiques ou déformées
+                  </li>
+                  <li>celles des personnes ayant des troubles du langage</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >La langue française</span
+                  >
+                  <span class="sr"> </span>
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-flex">
+                <div class="grid">
+                  <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                    Nouvelle démo de Samuel
+                  </h3>
+                  <div class="dcube-video">
+                    <video controls>
+                      <source src="videos/francetvlab.mp4" type="video/mp4" />
+
+                      Sorry, your browser doesn't support embedded videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block">
+                  <h3
+                    class="dcube-subtitle dcube-subtitle-dry dcube-text-unlimit dcube-text-center"
+                  >
+                    La langue française
+                  </h3>
+                  <div>
+                    <ul
+                      class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"
+                    >
+                      <li>Une langue riche et complexe ;</li>
+                      <li>
+                        avec ses règles de grammaire, de conjugaison et
+                        d'orthographe ;
+                      </li>
+                      <li>ses homonymes</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <ul
+                    class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"
+                  >
+                    <li>des noms communs ;</li>
+                    <li>des noms propres ;</li>
+                    <li>le langage métier, fonctionnel et technique ;</li>
+                    <li>les termes franco-anglais ;</li>
+                    <li>et même le verlan.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <table>
+                    <caption>
+                      Quelques perles des sous-titres automatiques
+                    </caption>
+                    <tr>
+                      <th scope="col">Mot dit</th>
+                      <th scope="col">Mot transcrit automatiquement</th>
+                    </tr>
+                    <tr>
+                      <td>timeout</td>
+                      <td>time à haute / time août</td>
+                    </tr>
+                    <tr>
+                      <td>IT</td>
+                      <td>Haïti</td>
+                    </tr>
+                    <tr>
+                      <td>tool in actions</td>
+                      <td>tooline actions</td>
+                    </tr>
+                    <tr>
+                      <td>stack</td>
+                      <td>sac</td>
+                    </tr>
+                    <tr>
+                      <td>validisme</td>
+                      <td>vally 10 mhz</td>
+                    </tr>
+                    <tr>
+                      <td>snippets</td>
+                      <td>slips</td>
+                    </tr>
+                    <tr>
+                      <td>speaker</td>
+                      <td>piqueur</td>
+                    </tr>
+                    <tr>
+                      <td>DevRel</td>
+                      <td>frêles</td>
+                    </tr>
+                    <tr>
+                      <td>sketchstorm</td>
+                      <td>tempête</td>
+                    </tr>
+                    <tr>
+                      <td>speech-to-text</td>
+                      <td>speech tout texte</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        Je suis en train de reprendre les sous-titres
+                        automatiques d'une vidéo syndicale. Je vous présente
+                        l'orthographe automatique de validisme: vally 10 mhz
+                      </p>
+                      &mdash; Nono le ronchon (@riroumourir)
+                      <a
+                        href="https://twitter.com/riroumourir/status/1502946948877271043?s=20&t=8Yxg_51M3zt3A5Rrtt47OQ"
+                        >13 mars 2022</a
+                      >
+                    </blockquote>
+                    <script
+                      async
+                      src="https://platform.twitter.com/widgets.js"
+                      charset="utf-8"
+                    ></script>
+                  </div>
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        J'adore la transcription automatique Youtube. Dans son
+                        podcast, @LostInBrittany dit qu'il est responsable des
+                        DevRel OVH. La transcription dit qu'il est responsable
+                        des frêles OVH. 🤣 Faut-il prendre ça pour une attaque
+                        perso de la part de Google ?
+                      </p>
+                      &mdash; Benjamin Dauvissat (@bdauvissat)
+                      <a
+                        href="https://twitter.com/bdauvissat/status/1530933108828250113?s=20&t=8Yxg_51M3zt3A5Rrtt47OQ"
+                        >29 mai 2022</a
+                      >
+                    </blockquote>
+                    <script
+                      async
+                      src="https://platform.twitter.com/widgets.js"
+                      charset="utf-8"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block">
+                  <h3>La conjugaison</h3>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center"
+              ></div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-grid">
+                  <h3>Les mots grossiers ou familiers</h3>
+
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        *****, ça a **** ! C’est quoi ce ****** ?! Alors là, je
+                        suis sur le *** ! ******, c’est ***** ! Voilà ce que les
+                        sous-titres automatiques peuvent afficher. Ça peut être
+                        anodin pour vous mais moi, ça m’agace.
+                      </p>
+                      &mdash; Emmanuelle ABOAF (@eaboaf_)
+                      <a
+                        href="https://twitter.com/eaboaf_/status/1463047863445987329?s=20&t=Xj7alv889scgrEqvjWccgw"
+                        >23 novembre 2022</a
+                      >
+                    </blockquote>
+                    <script
+                      async
+                      src="https://platform.twitter.com/widgets.js"
+                      charset="utf-8"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      Ce matin, en testant la retranscription automatique via
+                      word/O365 comme base de mon article du dernier épisode
+                      avec @Cindyagility 🦮 (et en vue de transcription
+                      intégrale bientôt @podcaccessible !), j'ai pris un fou
+                      rire en voyant le mot "*******" 🤣 Alors vous avez trouvé
+                      ? 🐕
+                    </p>
+                    <p>
+                      Description de l'image attaché au tweet : <br />
+                      Avec ma première ****** qui n'était pas la plus facile,
+                      elle était assez têtu quand même. Ouais, heu ouais,
+                      c'était, c'était une, une gentille ****** adorable.
+                      Vraiment niveau.<br />
+                      Au niveau, on a dire chien de compagnie.<br />
+                      Elle était parfaite.<br />
+                      Une ****** gentille, jamais un geste plus haut que
+                      l'autre, vraiment une gentille petite ******<br />
+                      Arpès, au niveau du guidage, il est très têtu. Et puis au
+                      final, elle s'est avérée être un peu lente pour moi parce
+                      que moi le le chien guide enfin, ça m'a redonner une
+                      liberté comme comme à tout le monde d'ailleurs, j'ai envie
+                      de dire mais.
+                    </p>
+                    &mdash; Futur Chien Guide (@FuturChienGuide)
+                    <a
+                      href="https://twitter.com/FuturChienGuide/status/1462410603851563011?s=20&t=snDlV_S1aAAs3zJXMSW9dQ"
+                      >21 novembre 2021</a
+                    >
+                  </blockquote>
+                  <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8"
+                  ></script>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-grid">
+                  <h3>La ponctuation</h3>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div>
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      Il y a aussi des phrases sans fin sans point et que des
+                      virgules. Avec une phrase sans fin, le sens est difficile
+                      à comprendre. Par ex avec cet épisode du podcast « La
+                      Table Ovale ». Il me faut lire mot à mot pour réaliser que
+                      là c’est la fin de la phrase et là le début.
+                    </p>
+                    &mdash; Emmanuelle ABOAF (@eaboaf_)
+                    <a
+                      href="https://twitter.com/eaboaf_/status/1444558122941657088?s=20&t=FowqZ6iyQHOxRoyQJdRBQQ"
+                      >3 octobre 2021</a
+                    >
+                  </blockquote>
+                  <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8"
+                  ></script>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Conclusion</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <p class="dcube-quote dcube-text-ultra" lang="en">
+                  AI is good but it’s not that good !
+                </p>
+                <p class="dcube-margin-t3">
+                  <a
+                    href="https://youtu.be/EDW1YAsfm9k?t=7009"
+                    target="_blank"
+                    title="Tim Cook à l'université Gallaudet - nouvelle fenêtre"
+                    >Tim Cook à l'université Gallaudet</a
+                  >, le 14 mai 2022.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <p class="dcube-text-ultra">
+                  Mélanger l'intelligence artificielle et l'intelligence humaine
+                </p>
+                <p class="dcube-text-maxi">
+                  pour rendre l'expérience encore meilleure.
+                </p>
+
+                <ul class="dcube-text-left dcube-text-great dcube-margin-t3">
+                  Ce qui signifie que vous pouvez :
+                  <li style="margin-top: 10px">
+                    Utilisez les outils automatiques
+                  </li>
+                  <li>
+                    et corrigez les fautes générées de la reconnaissance vocale
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <ul class="dcube-text-left dcube-text-great">
+                  Si vous voulez que la reconnaissance vocale fonctionne bien
+                  pour vous :
+                  <li style="margin-top: 10px">
+                    Soyez près de votre micro (et par la même occasion, ayez un
+                    bon micro)
+                  </li>
+                  <li>Minimiser les bruits en arrière-plan</li>
+                  <li>Parlez très clairement et pas trop vite</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block"></div>
             </div>
           </section>
         </main>

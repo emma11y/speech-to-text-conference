@@ -725,6 +725,12 @@ td {
   padding-bottom: 0.75em;
 }
 
+@media screen and (min-width: 64em) {
+  table {
+    font-size: 70%;
+  }
+}
+
 /**
  * -----------------------
  * @subsection 1.5 COLORS
@@ -2011,7 +2017,8 @@ blockquote cite {
   font-size: 100%;
 }
 
-.inv-c .main-header {
+.inv-c .main-header,
+.high-c .main-header {
   background: none !important;
 }
 
@@ -3317,6 +3324,16 @@ span.dcube-text-limit {
   width: 100%;
 }
 
+.dcube-flex {
+  display: flex;
+  height: 100%;
+}
+
+.dcube-grid {
+  display: grid;
+  height: 100%;
+}
+
 .dcube-item-block,
 .dcube-item-block .dcube-sub,
 .dcube-item-block .dcube-sup {
@@ -4183,6 +4200,11 @@ fieldset {
 
   .main-logo {
     background-color: transparent;
+    text-align: right;
+  }
+
+  .main-logo > img {
+    width: 30%;
   }
 
   .dcube-text-highlight {
@@ -5526,6 +5548,10 @@ fieldset {
   text-align: center;
 }
 
+.dcube-text-right {
+  text-align: right;
+}
+
 .dcube-quote::before {
   content: open-quote;
   font-size: 2em;
@@ -5550,4 +5576,34 @@ fieldset {
 .high-c .dcube-quote::before,
 .high-c .dcube-quote::after {
   color: #fff;
+}
+
+.high-c .main-logo {
+  background: transparent !important;
+}
+
+.dcube-chapter-title-code {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 64em) {
+  .dcube-code {
+    font-size: 80%;
+  }
+
+  .dcube-code-details {
+    margin-right: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.dcube-video {
+  position: relative;
+  left: 10%;
+}
+
+.dcube-video video {
+  width: 100%;
 }

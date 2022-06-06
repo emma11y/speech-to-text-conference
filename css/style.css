@@ -2268,7 +2268,7 @@ body.dys-l .help-info * {
   .main-header a {
     position: fixed;
     width: 50px;
-    top: 0.2em;
+    top: 0.8em;
     left: 50%;
     margin-left: -25px; /*top:8px;*/ /*right:42%;*/
     z-index: 1010;
