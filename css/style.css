@@ -1447,9 +1447,7 @@ body.dys-l .help-info * {
 
 .inv-c pre,
 .inv-c code,
-.inv-c kbd,
-.inv-c #wrappernav .btn,
-.inv-c #wrappernav select {
+.inv-c kbd {
   border: 1px solid #ffff00;
 }
 
@@ -2124,6 +2122,7 @@ body.dys-l .help-info * {
     padding: 0px;
     position: absolute;
     top: -10000px;
+    background: #171745;
   }
 
   #summary-container,
@@ -2428,9 +2427,9 @@ body.dys-l .help-info * {
     width: 100%;
   }
 
-  table td {
-    display: block;
-  }
+  /*table td {
+     display: block;
+  }*/
 
   table thead {
     position: absolute;

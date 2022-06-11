@@ -1,4 +1,159 @@
-<!DOCTYPE html><html lang="fr"><head><title>API Speech-To-Text : quelles sont ses avantages et ses limites ?</title><meta charset="utf-8"><meta name="robots" content="index, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if (IEMobile)]><meta http-equiv="cleartype" content="on" /><![endif]--><meta name="pinterest" content="nopin"><meta name="description" content=""><!-- JavaScript --><script src="js/Hammer.js"></script><script src="js/AccessReader.js"></script><script src="lang/lang_fr.js"></script><script src="js/screenfull.js"></script><script src="highlight/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><!-- CSS AccessSlide par défaut --><link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"><!-- CSS du thème --><link rel="stylesheet" id="currentCSS" href="css/theme-dcube.min.css" type="text/css" media="all"><!-- CSS du script Highlight --><link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" type="text/css" media="all"><!-- CSS print --><link rel="stylesheet" href="css/print.min.css" type="text/css" media="print"><!-- Favicons --><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><!-- Opengraph / Twitter cards --><meta property="og:title" content="API Speech-To-Text : quelles sont ses avantages et ses limites ? – Support de présentation - DCube"><meta property="og:locale" content="fr_FR"><meta property="og:type" content="website"><meta property="og:description" content=""><meta property="og:url" content="https://emma11y.github.io/speech-to-text-conference"><meta property="og:site_name" content="DCube"><meta property="article:tag" content="accessibilité"><meta property="article:tag" content="a11y"><meta property="article:tag" content="speech-to-text"><meta property="og:image" content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"><meta property="og:image:secure_url" content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"><meta property="og:image:width" content="1350"><meta property="og:image:height" content="675"><meta name="twitter:title" content="API Speech-To-Text : quelles sont ses avantages et ses limites ? – Support de présentation -DCube"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content=""><meta name="twitter:site" content="@eaboaf_"><meta name="twitter:image" content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"><meta name="twitter:creator" content="@eaboaf_"></head><body><div id="load"><img src="img_slide/load.gif" alt="Chargement en cours"></div><div id="screen" class="modeplan" data-effect="Eno"><div id="wrapper"><a href="#main" id="skip-link">Contenu</a><div id="prev-next"></div><div id="volet"></div><header id="banner" role="banner" class="main-header clearfix"><a href="https://dcube.fr/" target="_blank" aria-label="Consulter le site de DCube" class="main-logo"><img src="img_slide/dcube/logo_dcube_bleu.png" id="logo" role="img" aria-label="Logo de DCube"></a></header><nav role="navigation" aria-label="sommaire" id="sommaire" class="tool-block tool-block-summary" tabindex="-1"></nav><nav role="navigation" id="breadcrumb" class="breadcrumb"></nav><main role="main" id="main" class="dcube-main dcube-edito"><!-- COUVERTURE CONFÉRENCE	 --><section class="slide dcube-page-full dcube-bgcolor-c4a dcube-couv dcube-couv-start"><div class="inside dcube-align-center center"><div class="dcube-block"><h1 class="dcube-couv_title dcube-couv_title-maxi"><span class="dcube-item-block dcube-text-reinit">API Speech-To-Text : </span><span class="sr"></span> <span class="dcube-item-block dcube-text-reinit">quelles sont ses avantages et ses limites ?</span></h1><p class="logo dcube-sep"><img class="dcube-icon dcube-icon-couv" src="img_slide/dcube/logo_dcube_blanc.png" id="logo" role="img" aria-label="DCube" width="58" height="43"></p><p class="dcube-couv_subtitle">Emmanuelle ABOAF</p><p class="dcube-couv_details dcube-color-c5">Voxxed Days Luxembourg 2022 – juin 2022</p><p class="dcube-couv_details dcube-text-small">Twitter : <a href="https://twitter.com/eaboaf_" target="_blank" aria-label="@eaboaf_ : Suivez Emmanuelle ABOAF sur Twitter (Nouvelle fenêtre)" title="@eaboaf_ : Suivez Emmanuelle ABOAF sur Twitter">@eaboaf_</a></p></div></div></section><!-- Plan --><!-- <section class="slide dcube-page-full">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>
+      API Speech-To-Text : quelles sont ses avantages et ses limites ?
+    </title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!--[if (IEMobile)]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    <meta name="pinterest" content="nopin" />
+    <meta name="description" content="" />
+    <!-- JavaScript -->
+    <script src="js/Hammer.js"></script>
+    <script src="js/AccessReader.js"></script>
+    <script src="lang/lang_fr.js"></script>
+    <script src="js/screenfull.js"></script>
+    <script src="highlight/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <!-- CSS AccessSlide par défaut -->
+    <link
+      rel="stylesheet"
+      href="css/style.min.css"
+      type="text/css"
+      media="screen"
+    />
+    <!-- CSS du thème -->
+    <link
+      rel="stylesheet"
+      id="currentCSS"
+      href="css/theme-dcube.min.css"
+      type="text/css"
+      media="all"
+    />
+    <!-- CSS du script Highlight -->
+    <link
+      rel="stylesheet"
+      href="highlight/styles/tomorrow-night-eighties.css"
+      type="text/css"
+      media="all"
+    />
+    <!-- CSS print -->
+    <link
+      rel="stylesheet"
+      href="css/print.min.css"
+      type="text/css"
+      media="print"
+    />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <!-- Opengraph / Twitter cards -->
+    <meta
+      property="og:title"
+      content="API Speech-To-Text : quelles sont ses avantages et ses limites ? – Support de présentation - DCube"
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://emma11y.github.io/speech-to-text-conference"
+    />
+    <meta property="og:site_name" content="DCube" />
+    <meta property="article:tag" content="accessibilité" />
+    <meta property="article:tag" content="a11y" />
+    <meta property="article:tag" content="speech-to-text" />
+    <meta
+      property="og:image"
+      content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"
+    />
+    <meta property="og:image:width" content="1350" />
+    <meta property="og:image:height" content="675" />
+    <meta
+      name="twitter:title"
+      content="API Speech-To-Text : quelles sont ses avantages et ses limites ? – Support de présentation -DCube"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:site" content="@eaboaf_" />
+    <meta
+      name="twitter:image"
+      content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"
+    />
+    <meta name="twitter:creator" content="@eaboaf_" />
+  </head>
+  <body>
+    <div id="load">
+      <img src="img_slide/load.gif" alt="Chargement en cours" />
+    </div>
+    <div id="screen" class="modeplan" data-effect="Eno">
+      <div id="wrapper">
+        <a href="#main" id="skip-link">Contenu</a>
+        <div id="prev-next"></div>
+        <div id="volet"></div>
+        <header id="banner" role="banner" class="main-header clearfix">
+          <a
+            href="https://dcube.fr/"
+            target="_blank"
+            aria-label="Consulter le site de DCube"
+            class="main-logo"
+            ><img
+              src="img_slide/dcube/logo_dcube_bleu.png"
+              id="logo"
+              role="img"
+              aria-label="Logo de DCube"
+          /></a>
+        </header>
+        <nav
+          role="navigation"
+          aria-label="sommaire"
+          id="sommaire"
+          class="tool-block tool-block-summary"
+          tabindex="-1"
+        ></nav>
+        <nav role="navigation" id="breadcrumb" class="breadcrumb"></nav>
+        <main role="main" id="main" class="dcube-main dcube-edito">
+          <!-- COUVERTURE CONFÉRENCE	 -->
+          <section
+            class="slide dcube-page-full dcube-bgcolor-c4a dcube-couv dcube-couv-start"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h1 class="dcube-couv_title dcube-couv_title-maxi">
+                  <span class="dcube-item-block dcube-text-reinit"
+                    >API Speech-To-Text : </span
+                  ><span class="sr"></span>
+                  <span class="dcube-item-block dcube-text-reinit"
+                    >quelles sont ses avantages et ses limites ?</span
+                  >
+                </h1>
+                <p class="logo dcube-sep">
+                  <img
+                    class="dcube-icon dcube-icon-couv"
+                    src="img_slide/dcube/logo_dcube_blanc.png"
+                    id="logo"
+                    role="img"
+                    aria-label="DCube"
+                    width="58"
+                    height="43"
+                  />
+                </p>
+                <p class="dcube-couv_subtitle">Emmanuelle ABOAF</p>
+                <p class="dcube-couv_details dcube-color-c5">
+                  Voxxed Days Luxembourg 2022 – 21 juin 2022
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Plan --><!-- <section class="slide dcube-page-full">
          <div class="dcube-page-half-vertical">
              <div class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2">
                  <div class="dcube-block center">
@@ -16,111 +171,1321 @@
                  </div>
              </div>
          </div>
-     </section>--><section class="slide dcube-page-full dcube-bgcolor-c2"><div class="inside dcube-align-center center"><div class="dcube-block"><div class="grid"><h2 class="titre dcube-subtitle dcube-subtitle-dry">Ma présentation version speech-to-text</h2></div><p class="dcube-quote">bonjour je m'appelle emmanuel et je suis développeuse chez des hub des robes et un et binet de haïti spécialisée dans le développement le lahoud n'y a l'abbaye et la data mes sacs préférés sont ces sharp dunet et anular le bail gens entrent régulièrement et t'as un problème de time à haute je m'intéresse également aux aspects de l'intelligence artificielle notamment le speech tout texte thème on va aborder aujourd'hui étant sourde je lutte jour pour la cessibilité dans mon monde idéal tout doit être accessible aussi bien dans la vraie vie et dans le web</p><div class="toggle-gp-article toggle-gp dcube-toggle-box"><button class="dcube-btn dcube-btn-toggle" aria-expanded="false" aria-controls="transcription-1">Ce qui doit être normalement transcrit</button><div id="transcription-1" class="content-to-toggle is-hidden dcube-text-small center"><p>Bonjour, je m'appelle Emmanuelle et je suis développeuse chez Dcube. Dcube est un cabinet de conseil IT spécialisé dans le développement, le cloud, l'IA, la BI et la data. Mes stacks préférés sont C# .NET et Angular. Le bug que je rencontre régulièrement est un problème de timeout. Je m'intéresse également aux aspects de l'intelligence artificielle notamment le Speech-To-Text, thème qu'on va aborder aujourd'hui. Etant sourde, je lutte chaque jour pour l'accessiblité. Dans mon monde idéal, tout doit accessible aussi bien dans la vraie vie que dans le Web.</p></div></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c4a"><div class="inside dcube-align-center center"><div class="dcube-block"><h2 class="dcube-title-chapter dcube-title-chapter-comfy"><span class="dcube-text-reinit dcube-item-block">Mon expérience</span> <span class="sr"></span></h2></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c4a"><div class="inside dcube-align-center center"><div class="dcube-block"><h2 class="dcube-title-chapter dcube-title-chapter-comfy"><span class="dcube-text-reinit dcube-item-block">Un peu de technique</span> <span class="sr"></span></h2></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2"><div class="dcube-block" style="height:100%"><h3 class="dcube-subtitle">Deepgram</h3><div class="dcube-margin-t15" style="display:inline-grid;height:100%;width:100%"><ul>Pour utiliser Deepgram Speech-To-Text API :<li style="margin-top:10px">Créer un compte (150 $ de crédit gratuit)</li><li>Créer la clé API pour réaliser des requêtes</li><li>SDK disponible en Node.js, Python, .NET, Deno et Go</li></ul><div class="dcube-text-tiny dcube-border-t1 dcube-border-c4"><p>Site : <a href="https://deepgram.com/product/speech-to-text-api-overview/" title="Consultez le site (nouvelle fenêtre)" target="_blank">https://deepgram.com/product/speech-to-text-api-overview/</a></p><p>Code source en Node.js : <a href="https://github.com/deepgram/deepgram-node-sdk" title="Consultez la documentation avec Node.js (nouvelle fenêtre)" target="_blank">https://github.com/deepgram/deepgram-node-sdk</a></p></div></div></div></div><div class="dcube-page-half-vertical_col dcube-align-center"><div class="dcube-block"><div class="dcube-code"><pre>
-                      <code>                        
-      navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-        this.mediaRecorder = new MediaRecorder(stream, {
-          mimeType: 'audio/webm',
-        });
-
-        const liveTranscriptionOptions: LiveTranscriptionOptions = {
-          language: 'fr',
-          version: 'latest',
-          interim_results: true,
-        };
-
-        this.socket = new WebSocket('wss://api.deepgram.com/v1/listen?' + queryString.stringify(liveTranscriptionOptions), ['token', 'apiKey']);
-
-        this.socket.onopen = () => {
-          this.mediaRecorder.addEventListener('dataavailable', async (event) => {
-            if (event.data.size > 0 && this.socket.readyState === 1) {
-              this.socket.send(event.data);
-            }
-          });
-
-          this.mediaRecorder.start(0.25);
-        };
-
-        this.socket.onmessage = (message) => {
-          const data = JSON.parse(message.data);
-
-          if (data.start !== this.start) {
-            this.start = data.start;
-          }
-
-          this.transcript = data.channel.alternatives[0].transcript;
-        };
-      });
-                      </code>
-                    </pre></div></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2"><div class="dcube-block" style="height:100%"><h3 class="dcube-subtitle">Google</h3><div class="dcube-margin-t15" style="display:inline-grid;height:100%;width:100%"><div class="dcube-text-tiny dcube-border-t1 dcube-border-c4"></div></div></div></div><div class="dcube-page-half-vertical_col dcube-align-center"><div class="dcube-block"><div class="dcube-code"><pre>
-                      <code>                        
-
-                      </code>
-                    </pre></div></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2"><div class="dcube-block"><h3 class="dcube-subtitle">Microsoft</h3><div class="dcube-margin-t15" style="display:inline-grid;height:100%;width:100%"><div class="dcube-text-tiny dcube-border-t1 dcube-border-c4"></div></div></div></div><div class="dcube-page-half-vertical_col dcube-align-center"><div class="dcube-block"><div class="dcube-code"><pre>
-                      <code>                        
-
-                      </code>
-                    </pre></div></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2"><div class="dcube-block" style="height:100%"><h3 class="dcube-subtitle">Mozilla</h3><div class="dcube-margin-t15" style="display:inline-grid;height:100%;width:100%"><div class="dcube-text-tiny dcube-border-t1 dcube-border-c4"></div></div></div></div><div class="dcube-page-half-vertical_col dcube-align-center"><div class="dcube-block"><div class="dcube-code"><pre>
-                      <code>                        
-
-                      </code>
-                    </pre></div></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c4a"><div class="inside dcube-align-center center"><div class="dcube-block"><h2 class="dcube-title-chapter dcube-title-chapter-comfy"><span class="dcube-text-reinit dcube-item-block">Démos</span> <span class="sr"></span></h2></div></div></section><section class="slide dcube-page-full dcube-bg-color-c2"><div class="inside"><div class="dcube-block"><div class="grid"><h3 class="titre dcube-subtitle dcube-subtitle-dry">Démo 1 : Samuel</h3><div class="dcube-video"><video controls><source src="videos/francetvlab.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.</video></div></div></div></div></section><section class="slide dcube-page-full dcube-bg-color-c2"><div class="inside"><div class="dcube-block"><div class="grid"><h3 class="titre dcube-subtitle dcube-subtitle-dry">Démo 2 : Duchesse</h3></div></div></div></section><section class="slide dcube-page-full dcube-bg-color-c2"><div class="inside"><div class="dcube-block"><div class="grid"><h3 class="titre dcube-subtitle dcube-subtitle-dry">Démo 3 : Emmanuelle</h3></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c4a"><div class="inside dcube-align-center center"><div class="dcube-block"><h2 class="dcube-title-chapter dcube-title-chapter-comfy"><span class="dcube-text-reinit dcube-item-block">Biais</span> <span class="sr"></span></h2></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"><div class="dcube-block"><h3 class="dcube-subtitle">Biais du genre</h3><p class="dcube-quote dcube-margin-t15" lang="en">YouTube’s auto captions consistently performed better on male voices than female voice.</p><p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">Source : <a href="https://makingnoiseandhearingthings.com/2016/07/12/googles-speech-recognition-has-a-gender-bias/" target="new" title="Google's speech recognition has a gender biais(EN) - Nouvelle fenêtre"><span lang="en">Google's speech recognition has a gender biais (EN)</span>, article écrit en 2016 puis édité en 2020</a></p></div></div><div class="dcube-page-half-vertical_col dcube-align-center"><div class="dcube-block"><p class="dcube-quote" lang="en">Why does this bias exist ? (...) The underlying reason may be that databases have lots of white male data, and less data on female and minority voices. For example, TED Talks are frequently analyzed by speech scientists, and 70% of TED speakers are male.</p><p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">Source : <a href="https://hbr.org/2019/05/voice-recognition-still-has-significant-race-and-gender-biases" title="Voice recognition still significant race and genderbiases (EN) - Nouvelle fenêtre" target="new"><span lang="en">Voice recognition still significant race and gender biases</span> (EN), article écrit en 2019</a></p></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c2 dcube-page-border dcube-border-c0"><div class="inside dcube-align-center"><div class="dcube-block dcube-block-super center"><h4><a href="https://commonvoice.mozilla.org/" title="Common Voice - nouvelle fenêtre" target="_blank"><span lang="en">Common Voice</span></a></h4><table><caption><a href="https://commonvoice.mozilla.org/fr/datasets" target="_new" title="Datasets des voix pour la langue française">Datasets des voix pour la langue française</a></caption><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">Nombre de voix</th><th scope="col">Répartition en % de voix masculins *</th><th scope="col">Répartition en % de voix féminins *</th></tr><tr><td>1.0</td><td>25/02/2019</td><td>1 697</td><td>72%</td><td>7%</td></tr><tr><td>2.0</td><td>11/06/2019</td><td>2 985</td><td>70%</td><td>9%</td></tr><tr><td>3.0</td><td>24/06/2019</td><td>3 005</td><td>70%</td><td>9%</td></tr><tr><td>4.0</td><td>10/12/2019</td><td>8 164</td><td>65%</td><td>12%</td></tr><tr><td>5.1</td><td>22/06/2020</td><td>11 960</td><td>65%</td><td>11%</td></tr><tr><td>6.1</td><td>11/12/2020</td><td>12 953</td><td>65%</td><td>10%</td></tr><tr><td>7.0</td><td>21/07/2021</td><td>15 391</td><td>63%</td><td>11%</td></tr><tr><td>8.0</td><td>19/01/2022</td><td>16 082</td><td>62%</td><td>11%</td></tr><tr><td>9.0</td><td>27/04/2022</td><td>16 291</td><td>62%</td><td>10%</td></tr></table><p class="dcube-text-micro dcube-text-right">* Le reste des voix proviennent des voix anonymes</p></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="inside dcube-align-center"><div class="dcube-block"><p class="center dcube-text-mega">Chaque voix compte.</p><div class="dcube-cols dcube-margin-t15 aligncenter"><div class="col-1-2"><a href="https://sites.research.google/euphonia/about/" title="Consulter le site du projet Euphonia (EN) - nouvelle fenêtre" target="_blank">Projet Euphonia</a><p class="dcube-quote dcube-margin-t2" lang="en">Project Euphonia is a Google Research initiative focused on helping people with atypical speech be better understood. The approach is centered on analyzing speech recordings to better train speech recognition models.</p></div><div class="col-1-2"><a href="https://voiceitt.com/" title="Consulter le site Voice ITT (EN) - nouvelle fenêtre" target="_blank">Voice ITT</a><p class="dcube-quote dcube-margin-t2" lang="en">Using data from your speech, cadence, breath, and pauses, Voiceitt’s machine learning creates a dataset unique to your speech patterns. Our team of speech and language experts annotate speech samples to calibrate and refine our algorithm, ensuring accurate prediction for the broadest range of speech. Voiceitt’s tailored model learns your speech patterns to understand what you’re saying.</p></div></div></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"><div class="dcube-block"><h3 class="dcube-subtitle dcube-subtitle-dry dcube-text-unlimit dcube-text-center">La langue française</h3><div><ul class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"><li>Une langue riche et complexe ;</li><li>avec ses règles de grammaire, de conjugaison et d'orthographe ;</li><li>ses homonymes</li></ul></div></div></div><div class="dcube-page-half-vertical_col dcube-align-center"></div></div></section><section class="slide dcube-page-full dcube-bgcolor-c0"><div class="dcube-page-half-vertical"><div class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"><div class="dcube-block"><h3 class="dcube-subtitle dcube-subtitle-dry dcube-text-unlimit dcube-text-center">La langue française</h3><div><ul class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"><li>Une langue riche et complexe ;</li><li>avec ses règles de grammaire, de conjugaison et d'orthographe ;</li><li>ses homonymes</li></ul></div></div></div><div class="dcube-page-half-vertical_col dcube-align-center"></div></div></section><!--<section class="slide dcube-page-full dcube-bgcolor-c0">
-            <div class="dcube-page-half-vertical">
-              <div class="dcube-page-half-vertical_col dcube-align-center">
-                <div class="dcube-block">
-                  <h3
-                    class="dcube-subtitle dcube-subtitle-dry dcube-text-unlimit dcube-text-center"
-                  >
-                    Langage spécifique
-                  </h3>
-                  <ul>
-                    <li>Noms propres et communs</li>
-                    <li>Langage technique, métier et fonctionnel</li>
-                    <li>Termes franco-anglais</li>
-                    <li>Verlan</li>
-                  </ul>
+     </section>-->
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <div class="grid">
+                  <h2 class="titre dcube-subtitle dcube-subtitle-dry">
+                    Ma présentation version speech-to-text
+                  </h2>
                 </div>
-              </div>
-
-              <div class="slide dcube-page-full dcube-bgcolor-c0">
-                <div class="dcube-block">
-                  <h3
-                    class="dcube-subtitle dcube-subtitle-dry dcube-text-unlimit dcube-text-center"
+                <p class="dcube-quote">
+                  bonjour je m'appelle emmanuel et je suis développeuse chez des
+                  hub des robes et un et binet de haïti spécialisée dans le
+                  développement le lahoud n'y a l'abbaye et la data mes sacs
+                  préférés sont ces sharp dunet et anular le bail gens entrent
+                  régulièrement et t'as un problème de time à haute je
+                  m'intéresse également aux aspects de l'intelligence
+                  artificielle notamment le speech tout texte thème on va
+                  aborder aujourd'hui étant sourde je lutte jour pour la
+                  cessibilité dans mon monde idéal tout doit être accessible
+                  aussi bien dans la vraie vie et dans le web
+                </p>
+                <div class="toggle-gp-article toggle-gp dcube-toggle-box">
+                  <button
+                    class="dcube-btn dcube-btn-toggle"
+                    aria-expanded="false"
+                    aria-controls="transcription-1"
                   >
-                    Langue genrée VS langue neutre
-                  </h3>
-                  <div>
-                    <ul>
-                      <li>Emmanuel est arrivé à la maison</li>
-                      <li>
-                        <span lang="en">Emmanuel has arrived at home</span>
-                      </li>
-                    </ul>
-
-                    <p>Mettre la démo !!!</p>
-                    <div
-                      class="grid"
-                      style="margin-top: 30px; display: flex; font-size: 18px"
-                    >
-                      <div class="col">
-                        <h4>Mozilla</h4>
-                        <p>annie est arrivé à la maison</p>
-                      </div>
-                      <div class="col">
-                        <h4>Google</h4>
-                        <p>annie est arrivé à la maison</p>
-                      </div>
-                      <div class="col">
-                        <h4>Microsoft</h4>
-                        <p>annie est arrivé à la maison</p>
-                      </div>
-                      <div class="col">
-                        <h4>Deepgram</h4>
-                        <p>annie est arrivé à la maison</p>
-                      </div>
-                    </div>
+                    Ce qui doit être normalement transcrit
+                  </button>
+                  <div
+                    id="transcription-1"
+                    class="content-to-toggle is-hidden dcube-text-small center"
+                  >
+                    <p>
+                      Bonjour, je m'appelle Emmanuelle et je suis développeuse
+                      chez Dcube. Dcube est un cabinet de conseil IT spécialisé
+                      dans le développement, le cloud, l'IA, la BI et la data.
+                      Mes stacks préférés sont C# .NET et Angular. Le bug que je
+                      rencontre régulièrement est un problème de timeout. Je
+                      m'intéresse également aux aspects de l'intelligence
+                      artificielle notamment le Speech-To-Text, thème qu'on va
+                      aborder aujourd'hui. Etant sourde, je lutte chaque jour
+                      pour l'accessiblité. Dans mon monde idéal, tout doit
+                      accessible aussi bien dans la vraie vie que dans le Web.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </section>--></main></div><!-- #wrapper --><footer id="footer" role="contentinfo"><div id="owner-info" class="owner-info dcube-modal dcube-edito" role="dialog" tabindex="-1" style="display:none" data-close="Fermer les informations éditeur"><div role="document" tabindex="0"><p><a href="https://accesslide.net/" target="_blank" aria-label="AccesSlide créé par Access42 (Nouvelle fenêtre)">AccesSlide créé par Access42</a>, tous droits réservés.</p></div></div></footer><div id="help-info" class="help-info dcube-modal dcube-edito" role="dialog" tabindex="-1" style="display:none" data-close="Fermer l'aide"><div role="document" tabindex="0"><div class="dcube-cols"><div class="col-1-2"><h2>Navigation</h2><p>Pour passer d’une page à une autre, vous disposez des boutons «&nbsp;Suivant&nbsp;» et «&nbsp;Précédent&nbsp;».</p><p>Sur appareil mobile, vous avez la possibilité de changer de page en balayant l’écran&nbsp;:</p><ul><li>de la droite vers la gauche, pour passer à la page suivante&nbsp;;</li><li>de la gauche vers la droite, pour revenir à la page précédente.</li></ul><h3>Navigation avec lecteur d’écran sur appareils mobiles</h3><p>Si vous utilisez un lecteur d’écran sur mobile, ces actions sont différentes selon votre logiciel&nbsp;:</p><ul><li>sur Android avec <span lang="en">TalkBack</span>&nbsp;: l’action se réalise avec deux doigts sur l’écran (les deux doigts doivent &ecirc;tre suffisamment espacés l’un de l’autre)&nbsp;;</li><li>sur <span lang="en">iPhone</span> avec <span lang="en">VoiceOver</span>&nbsp;: effectuer un double tap prolongé et maintenir le doigt appuyé quelques secondes puis balayer l’écran vers la gauche ou la droite.</li><li>Si ces actions ne sont pas effectives, vous devez retourner en haut de page pour atteindre les boutons «&nbsp;Suivant&nbsp;» et «&nbsp;Précédent&nbsp;».</li></ul><h3>Navigation au clavier</h3><table class="dcube-table-fixed"><caption class="sr">Navigation au clavier</caption><thead><tr><th scope="col">Touche</th><th scope="col">Action</th></tr></thead><tbody><tr><td class="dcube-table_cell-alpha"><kbd>CTRL + Espace</kbd></td><td>Page suivante avec la dernière version de NVDA ou <span lang="en">JAWS</span> 18</td></tr><tr><td class="dcube-table_cell-alpha"><kbd>Espace</kbd> ou <kbd>Flèche droite</kbd></td><td>Page suivante dans les autres cas</td></tr><tr><td class="dcube-table_cell-alpha"><kbd>MAJ + CTRL + Espace</kbd></td><td>Page précédente avec la dernière version de NVDA ou <span lang="en">JAWS</span> 18</td></tr><tr><td class="dcube-table_cell-alpha"><kbd>MAJ + Espace</kbd> ou <kbd>Flèche gauche</kbd></td><td>Page précédente dans les autres cas</td></tr><tr><td class="dcube-table_cell-alpha"><kbd>Début</kbd></td><td>Première page</td></tr><tr><td class="dcube-table_cell-alpha"><kbd>Fin</kbd></td><td>Dernière page</td></tr><tr><td class="dcube-table_cell-alpha"><kbd>ALT + 0 (zéro)</kbd></td><td>Sommaire</td></tr></tbody></table></div><div class="col-1-2"><h2>Options d’accessibilité</h2><p><span lang="en">AccessReader</span> propose plusieurs options d’accessibilité à configurer dans le volet «&nbsp;Configuration&nbsp;».</p><h3>Dyslexie</h3><p>Pour un meilleur confort de lecture, cochez les options «&nbsp;Police adaptée&nbsp;» et «&nbsp;Interlignage adapté&nbsp;».</p><h3>Contraste</h3><p><span lang="en">AccessReader</span> propose trois niveaux de contraste&nbsp;:</p><ul><li>par défaut&nbsp;;</li><li>inversé&nbsp;;</li><li>renforcé.</li></ul><h3>Vocalisation</h3><p>Vous pouvez sélectionner, à la section «&nbsp;Accessibilité&nbsp;», différentes options sonores.</p><p>Vous pouvez choisir les actions qui déclencheront un signal sonore (chaque signal sonore est différent en fonction de l’action)&nbsp;:</p><ul><li>Page&nbsp;: émet un bip lorsque vous arrivez sur une nouvelle page</li><li>Début&nbsp;: émet un bip lorsque vous atteignez la première page</li><li>Fin&nbsp;: émet un bip lorsque vous atteignez la dernière page</li></ul><p>Vous pouvez également choisir des éléments supplémentaires à vocaliser&nbsp;:</p><ul><li>Numéro&nbsp;: vocalise le numéro de la page à son affichage</li><li>Titre&nbsp;: vocalise le titre de la page à son affichage</li></ul></div></div><div class="clear dcube-margin-t2"><h2>Conseils pour l’utilisation d’<span lang="en">AccessReader</span> avec un lecteur d’écran</h2><div class="col-1-2"><p><strong>Note </strong>&nbsp;: <span lang="en">AccessReader</span> a été utilisé avec les lecteurs d’écran suivants&nbsp;:</p><ul><li>Windows&nbsp;: NVDA 2017.3 avec Firefox 55 et <span lang="en">Internet Explorer</span> 11&nbsp;;</li><li>Windows&nbsp;: <span lang="en">JAWS</span> version 18 avec <span lang="en">Internet Explorer</span> 11&nbsp;;</li><li>Mac&nbsp;: <span lang="en">Sierra</span> avec <span lang="en">VoiceOver</span> et Safari.</li><li>Linux&nbsp;: Ubuntu 14 avec Orca et Firefox 30.</li></ul><h3>Recommandations pour la configuration avec un lecteur d’écran</h3><ol><li>Rechercher le bouton «&nbsp;Ouvrir la configuration&nbsp;» (il se trouve en bas de page).</li><li>Choisir la police, l’interlignage et les contrastes les plus adaptés à sa vision.</li><li>Dans la partie «&nbsp;Accessibilité&nbsp;», on peut choisir de cocher ou non des cases à cocher pour&nbsp;:<ul><li>vocaliser les numéros de page,</li><li>entendre des bips quand on arrive à la première ou la dernière page,</li><li>vocaliser le titre de la page en cours.</li></ul></li><li>Veiller à ce que la case «&nbsp;désactive l’action du clic pour afficher la page suivante&nbsp;» soit décochée, (NVDA et <span lang="en">JAWS</span>). Pour <span lang="en">VoiceOver</span> et Orca, cela ne semble pas avoir d’incidence.</li><li>Dans la partie «&nbsp;lecteur&nbsp;», on peut choisir d’afficher ou non le sommaire et de consulter le document en mode page à page ou en mode plan. Dans le cas du mode plan, toutes les pages seront affichées en mode linéaire. Elles seront séparées par des titres de niveau 2. Dans le cas du mode page, il faudra appuyer sur suivant ou sur espace pour afficher la page suivante.</li></ol><h3>Note sur l’utilisation des commandes du lecteur avec un lecteur d’écran</h3><p>L’appui sur la barre d’espace pour aller à la page suivante ne fonctionne pas avec NVDA et Firefox&nbsp;<abbr title="version supérieure ou égale à">≥</abbr>55, ni avec <span lang="en">JAWS</span> et Internet <span lang="en">Explorer</span>&nbsp;<abbr title="version supérieure ou égale à">≥</abbr>11. Dans ces deux cas, il faut utiliser le raccourci <kbd>CTRL + Espace</kbd> pour passer à la page suivante, et <kbd>MAJ + CTRL + Espace</kbd> pour passer à la page précédente.</p><p>L’appui sur les autres touches pour aller au début et à la fin du document ne fonctionnent pas non plus avec <span lang="en">JAWS</span> et NVDA. Pour pallier ce problème :</p><ul><li>dans NVDA, appuyer sur <kbd>NVDA + F2</kbd> pour ignorer l’appui sur la touche suivante ;</li><li>dans <span lang="en">JAWS</span>, appuyer sur <kbd><span lang="en">JAWS</span> + 3</kbd> du pavé alphanumérique pour ignorer l’appui sur la touche suivante.</li></ul><p><span lang="en">VoiceOver</span> et Orca gèrent très bien la navigation à la page suivante, avec espace, page précédente avec <kbd>SHIFT + espace</kbd>, début et fin de support de présentation.</p><p>Par contre l’utilisation des flèches droite et gauche ne fonctionne avec aucun des lecteurs d’écran mentionnés ci-dessus.</p></div><div class="col-1-2"><h3>Utilisation du dialogue de configuration avec un lecteur d’écran</h3><p>Lorsqu’on ouvre la configuration, une «&nbsp;Fen&ecirc;tre&nbsp;» apparaît. <span lang="en">VoiceOver</span> annonce «&nbsp;paramètres&nbsp;» avec 7 éléments. Chaque catégorie est annoncée comme «&nbsp;groupe&nbsp;» par <span lang="en">VoiceOver</span>&nbsp;: exemple dyslexie, contrastes, accessibilité, effets (groupe). <span lang="en">VoiceOver</span> annonce le nombre d’éléments dans chaque catégorie. Pour ouvrir une catégorie, appuyer sur <kbd>VO + Majuscule + flèche bas</kbd>.</p><p>Pour modifier les paramètres accessibilité, une fois que <span lang="en">VoiceOver</span> annonce accessibilité, interagir à l’aide de VO+majuscule+flèche bas et se déplacer parmi les boutons. <span lang="en">VoiceOver</span> n’annonce pas le titre associé à chaque bouton.</p><p>Avec les autres lecteurs d’écran, il suffit, une fois que la fen&ecirc;tre a été ouverte, d’utiliser la tabulation et d’effectuer les choix souhaités en cochant les éléments à l’aide de la barre d’espace.</p><p>Veillez à ne pas dépasser le bouton «&nbsp;Enregistrer&nbsp;» car on risque de se retrouver dans la barre d’adresses du navigateur et il est difficile de revenir en arrière.</p><h3>Autres petits dysfonctionnements des lecteurs d’écran</h3><h3>NVDA et Orca</h3><p>Lorsqu’on passe à la page suivante ou précédente et que la vocalisation des numéros de pages est cochée, NVDA et Orca annoncent « null » puis le numéro de page. Pour les chiffres supérieurs à 10, ils continuent d’annoncer 1, 2, 3… Seules les dizaines, 10, 20, 30… sont annoncées correctement.</p><p>L’annonce des numéros de pages est correcte avec <span lang="en">JAWS</span> à partir de la version 15 et <span lang="en">VoiceOver</span>.</p><h3><span lang="en">JAWS</span></h3><p>Si vous utilisez <span lang="en">JAWS</span>, la version 14 du logiciel ne fonctionne pas bien avec Firefox. Préférer l’utilisation du lecteur avec <span lang="en">Internet Explorer</span>. JAWS 14 ne vocalise pas les numéros de page ni leur titre.</p><p>Pour toute question concernant l’utilisation d’<span lang="en">Accessreader</span> avec un lecteur d’écran, ne pas hésiter à <a href="mailto:bonjour@access42.net">nous contacter</a>.</p></div></div><div class="clear dcube-margin-t2"><div class="col-1-2"><h2>Structure des titres</h2><p>Le premier titre de niveau 1 (<code>h1</code>) rencontré dans la page contient le titre du support de présentation. Ce titre de niveau 1 reste le même tout au long du support de présentation.</p><p>Ensuite, chaque grande section du support de présentation est titrée par un titre de niveau 2 (<code>h2</code>).</p><p>À l’intérieur d’une grande section, les sous-sections peuvent être titrées par des titres de niveau 3 (<code>h3</code>) ou par un niveau de titre encore inférieur.</p><p>Cette structure de titres peut sembler incohérente lorsqu’elle est vocalisée : en effet, on passe parfois d’un <code>h1</code> à un <code>h3</code>, voire à un titre de niveau inférieur. Elle n’en reste pas moins cohérente à l’échelle du document, et parfaitement valide au regard de la norme HTML 5.</p><p>Par ailleurs, lorsqu’on se trouve dans une sous-section, un fil d’ariane cliquable apparaît après l’en-tête du document, et permet de retourner au début de la grande section concernée si besoin.</p></div></div></div></div><div id="nav-wrapper" class="tool-bar footer-nav clearfix navbar-invisible" tabindex="0"><div id="wrappernav"></div></div><div id="setting" class="tool-block tool-block-settings" role="dialog" tabindex="-1" style="display:none"></div></div><div id="Caudio"></div><div id="Dcourante" aria-live="polite" aria-atomic="true" aria-hidden="true"></div><script src="js/slide.js"></script><script src="js/afontgarde.js"></script><script>AFontGarde("FontAwesome",{glyphs:"",success:function(){console.log("success")},error:function(){console.log("timeout error")},timeout:1e4})</script><script type="text/javascript" src="js/AccessTooltip.js"></script><script type="text/javascript" src="js/Toggle.js"></script><script type="text/javascript">AccessTooltip({objs:"a, button, input, textarea, select,abbr,img",tooltipClassName:"access-tooltip",toolTipBetween:2,toolTipUp:!0,mouse:!0,tempDelay:1e3,useAriaDP:!1,useEscClose:!0})</script><script src="js/AccessNote.js" type="text/javascript"></script><script>AccessNote()</script></body></html>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Mon expérience</span
+                  >
+                  <span class="sr"></span>
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Un peu de technique</span
+                  >
+                  <span class="sr"></span>
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block">Démos</span>
+                  <span class="sr"></span>
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-block">
+                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                  Démo 1 : Samuel
+                </h3>
+                <div class="dcube-video">
+                  <video controls>
+                    <source src="videos/francetvlab.mp4" type="video/mp4" />
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-block">
+                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                  Démo 2 : Duchesse
+                </h3>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-block">
+                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                  Démo 3 : Emmanuelle
+                </h3>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block">Biais</span>
+                  <span class="sr"></span>
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block">
+                  <h3
+                    class="dcube-subtitle"
+                    style="
+                      position: absolute;
+                      top: 10%;
+                      left: 0;
+                      width: 100%;
+                      text-align: center;
+                    "
+                  >
+                    Biais du genre
+                  </h3>
+                  <p
+                    class="dcube-quote dcube-margin-t15"
+                    lang="en"
+                    style="margin: 50px"
+                  >
+                    YouTube’s auto captions consistently performed better on
+                    male voices than female voice.
+                  </p>
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    Source :
+                    <a
+                      href="https://makingnoiseandhearingthings.com/2016/07/12/googles-speech-recognition-has-a-gender-bias/"
+                      target="new"
+                      title="Google's speech recognition has a gender biais(EN) - Nouvelle fenêtre"
+                      ><span lang="en"
+                        >Google's speech recognition has a gender biais
+                        (EN)</span
+                      >, article écrit en 2016 puis édité en 2020</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <p class="dcube-quote" lang="en" style="margin: 50px">
+                    Why does this bias exist ? (...) The underlying reason may
+                    be that databases have lots of white male data, and less
+                    data on female and minority voices. For example, TED Talks
+                    are frequently analyzed by speech scientists, and 70% of TED
+                    speakers are male.
+                  </p>
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    Source :
+                    <a
+                      href="https://hbr.org/2019/05/voice-recognition-still-has-significant-race-and-gender-biases"
+                      title="Voice recognition still significant race and genderbiases (EN) - Nouvelle fenêtre"
+                      target="new"
+                      ><span lang="en"
+                        >Voice recognition still significant race and gender
+                        biases</span
+                      >
+                      (EN), article écrit en 2019</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="slide dcube-page-full dcube-bgcolor-c2 dcube-page-border dcube-border-c0"
+          >
+            <div class="inside dcube-align-center">
+              <div class="dcube-block dcube-block-super center">
+                <h4>
+                  <a
+                    href="https://commonvoice.mozilla.org/"
+                    title="Common Voice - nouvelle fenêtre"
+                    target="_blank"
+                    ><span lang="en">Common Voice</span></a
+                  >
+                </h4>
+                <table>
+                  <caption>
+                    <a
+                      href="https://commonvoice.mozilla.org/fr/datasets"
+                      target="_new"
+                      title="Datasets des voix pour la langue française"
+                      >Datasets des voix pour la langue française</a
+                    >
+                  </caption>
+                  <tr>
+                    <th scope="col">Version</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Nombre de voix</th>
+                    <th scope="col">Répartition de voix masculines *</th>
+                    <th scope="col">Répartition de voix féminines *</th>
+                  </tr>
+                  <tr>
+                    <td>1.0</td>
+                    <td>25/02/2019</td>
+                    <td>1 697</td>
+                    <td>72%</td>
+                    <td>7%</td>
+                  </tr>
+                  <tr>
+                    <td>2.0</td>
+                    <td>11/06/2019</td>
+                    <td>2 985</td>
+                    <td>70%</td>
+                    <td>9%</td>
+                  </tr>
+                  <tr>
+                    <td>3.0</td>
+                    <td>24/06/2019</td>
+                    <td>3 005</td>
+                    <td>70%</td>
+                    <td>9%</td>
+                  </tr>
+                  <tr>
+                    <td>4.0</td>
+                    <td>10/12/2019</td>
+                    <td>8 164</td>
+                    <td>65%</td>
+                    <td>12%</td>
+                  </tr>
+                  <tr>
+                    <td>5.1</td>
+                    <td>22/06/2020</td>
+                    <td>11 960</td>
+                    <td>65%</td>
+                    <td>11%</td>
+                  </tr>
+                  <tr>
+                    <td>6.1</td>
+                    <td>11/12/2020</td>
+                    <td>12 953</td>
+                    <td>65%</td>
+                    <td>10%</td>
+                  </tr>
+                  <tr>
+                    <td>7.0</td>
+                    <td>21/07/2021</td>
+                    <td>15 391</td>
+                    <td>63%</td>
+                    <td>11%</td>
+                  </tr>
+                  <tr>
+                    <td>8.0</td>
+                    <td>19/01/2022</td>
+                    <td>16 082</td>
+                    <td>62%</td>
+                    <td>11%</td>
+                  </tr>
+                  <tr>
+                    <td>9.0</td>
+                    <td>27/04/2022</td>
+                    <td>16 291</td>
+                    <td>62%</td>
+                    <td>10%</td>
+                  </tr>
+                </table>
+                <p class="dcube-text-micro dcube-text-right">
+                  * Le reste des voix proviennent des voix anonymes
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <p class="center" style="font-size: 3em">Chaque voix compte.</p>
+                <p class="center">Y compris :</p>
+                <ul>
+                  <li>celles des femmes</li>
+                  <li>celles des personnes issues de la minorité</li>
+                  <li>celles des personnes ayant des accents</li>
+                  <li>
+                    celles des personnes ayant des voix atypiques ou déformées
+                  </li>
+                  <li>celles des personnes ayant des troubles du langage</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >La langue française</span
+                  >
+                  <span class="sr"></span>
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-block">
+                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                  Nouvelle démo de Samuel
+                </h3>
+                <div class="dcube-video">
+                  <video autoplay controls>
+                    <source src="videos/francetvlab.mp4" type="video/mp4" />
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block">
+                  <h3
+                    class="dcube-subtitle dcube-subtitle-dry dcube-text-unlimit dcube-text-center"
+                  >
+                    La langue française
+                  </h3>
+                  <div>
+                    <ul
+                      class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"
+                    >
+                      <li>Une langue riche et complexe ;</li>
+                      <li>
+                        avec ses règles de grammaire, de conjugaison et
+                        d'orthographe ;
+                      </li>
+                      <li>ses homonymes</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <ul
+                    class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"
+                  >
+                    <li>des noms communs ;</li>
+                    <li>des noms propres ;</li>
+                    <li>des acronymes ;</li>
+                    <li>le langage métier, fonctionnel et technique ;</li>
+                    <li>les termes franco-anglais ;</li>
+                    <li>et même le verlan.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <table>
+                    <caption>
+                      Quelques perles des sous-titres automatiques
+                    </caption>
+                    <tr>
+                      <th scope="col">Mot dit</th>
+                      <th scope="col">Mot transcrit automatiquement</th>
+                    </tr>
+                    <tr>
+                      <td>timeout</td>
+                      <td>time à haute / time août</td>
+                    </tr>
+                    <tr>
+                      <td>IT</td>
+                      <td>Haïti</td>
+                    </tr>
+                    <tr>
+                      <td>tool in actions</td>
+                      <td>tooline actions</td>
+                    </tr>
+                    <tr>
+                      <td>stack</td>
+                      <td>sac</td>
+                    </tr>
+                    <tr>
+                      <td>validisme</td>
+                      <td>vally 10 mhz</td>
+                    </tr>
+                    <tr>
+                      <td>demande entrante</td>
+                      <td>demande en 30</td>
+                    </tr>
+                    <tr>
+                      <td>snippets</td>
+                      <td>slips</td>
+                    </tr>
+                    <tr>
+                      <td>speaker</td>
+                      <td>piqueur</td>
+                    </tr>
+                    <tr>
+                      <td>DevRel</td>
+                      <td>frêles</td>
+                    </tr>
+                    <tr>
+                      <td>sketchstorm</td>
+                      <td>tempête</td>
+                    </tr>
+                    <tr>
+                      <td>speech-to-text</td>
+                      <td>speech tout texte</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        Je suis en train de reprendre les sous-titres
+                        automatiques d'une vidéo syndicale. Je vous présente
+                        l'orthographe automatique de validisme: vally 10 mhz
+                      </p>
+                      &mdash; @riroumourir
+                      <a
+                        title="Consulter le tweet de @riroumourir du 13 mars 2022 - nouvelle fenêtre"
+                        target="_blank"
+                        href="https://twitter.com/riroumourir/status/1502946948877271043?s=20&t=8Yxg_51M3zt3A5Rrtt47OQ"
+                        >13 mars 2022</a
+                      >
+                    </blockquote>
+                  </div>
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        J'adore la transcription automatique Youtube. Dans son
+                        podcast, @LostInBrittany dit qu'il est responsable des
+                        DevRel OVH. La transcription dit qu'il est responsable
+                        des frêles OVH. 🤣 Faut-il prendre ça pour une attaque
+                        perso de la part de Google ?
+                      </p>
+                      &mdash; @bdauvissat
+                      <a
+                        href="https://twitter.com/bdauvissat/status/1530933108828250113?s=20&t=8Yxg_51M3zt3A5Rrtt47OQ"
+                        title="Consulter le tweet de @bdauvissat du 29 mai 2022 - nouvelle fenêtre"
+                        target="_blank"
+                        >29 mai 2022</a
+                      >
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block"><h3>La conjugaison</h3></div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center"
+              ></div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-grid">
+                  <h3>Les mots grossiers ou familiers</h3>
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        *****, ça a **** ! C’est quoi ce ****** ?! Alors là, je
+                        suis sur le *** ! ******, c’est ***** ! Voilà ce que les
+                        sous-titres automatiques peuvent afficher. Ça peut être
+                        anodin pour vous mais moi, ça m’agace.
+                      </p>
+                      &mdash; Emmanuelle ABOAF (@eaboaf_)
+                      <a
+                        href="https://twitter.com/eaboaf_/status/1463047863445987329?s=20&t=Xj7alv889scgrEqvjWccgw"
+                        title="Consulter le tweet d'Emmanuelle ABOAF du 23 novembre 2021 - nouvelle fenêtre"
+                        target="_blank"
+                        >23 novembre 2021</a
+                      >
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      Ce matin, en testant la retranscription automatique via
+                      word/O365 comme base de mon article du dernier épisode
+                      avec @Cindyagility 🦮 (et en vue de transcription
+                      intégrale bientôt @podcaccessible !), j'ai pris un fou
+                      rire en voyant le mot "*******" 🤣 Alors vous avez trouvé
+                      ? 🐕
+                    </p>
+                    <div class="toggle-gp-article toggle-gp dcube-toggle-box">
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="transcription-2"
+                      >
+                        Description de l'image attaché au tweet
+                      </button>
+                      <div
+                        id="transcription-2"
+                        class="content-to-toggle is-hidden dcube-text-small"
+                      >
+                        <p>
+                          Avec ma première ****** qui n'était pas la plus
+                          facile, elle était assez têtu quand même. Ouais, heu
+                          ouais, c'était, c'était une, une gentille ******
+                          adorable. Vraiment niveau.<br />Au niveau, on a dire
+                          chien de compagnie.<br />Elle était parfaite.<br />Une
+                          ****** gentille, jamais un geste plus haut que
+                          l'autre, vraiment une gentille petite ******<br />Arpès,
+                          au niveau du guidage, il est très têtu. Et puis au
+                          final, elle s'est avérée être un peu lente pour moi
+                          parce que moi le le chien guide enfin, ça m'a redonner
+                          une liberté comme comme à tout le monde d'ailleurs,
+                          j'ai envie de dire mais.
+                        </p>
+                      </div>
+                    </div>
+                    &mdash; Futur Chien Guide (@FuturChienGuide)
+                    <a
+                      href="https://twitter.com/FuturChienGuide/status/1462410603851563011?s=20&t=snDlV_S1aAAs3zJXMSW9dQ"
+                      >21 novembre 2021</a
+                    >
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-grid"><h3>La ponctuation</h3></div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div>
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      Il y a aussi des phrases sans fin sans point et que des
+                      virgules. Avec une phrase sans fin, le sens est difficile
+                      à comprendre. Par ex avec cet épisode du podcast « La
+                      Table Ovale ». Il me faut lire mot à mot pour réaliser que
+                      là c’est la fin de la phrase et là le début.
+                    </p>
+                    &mdash; Emmanuelle ABOAF (@eaboaf_)
+                    <a
+                      href="https://twitter.com/eaboaf_/status/1444558122941657088?s=20&t=FowqZ6iyQHOxRoyQJdRBQQ"
+                      >3 octobre 2021</a
+                    >
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Conclusion</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <p class="dcube-quote dcube-text-ultra" lang="en">
+                  AI is good but it’s not that good !
+                </p>
+                <p class="dcube-margin-t3">
+                  <a
+                    href="https://youtu.be/EDW1YAsfm9k?t=7009"
+                    target="_blank"
+                    title="Tim Cook à l'université Gallaudet - nouvelle fenêtre"
+                    >Tim Cook à l'université Gallaudet</a
+                  >, le 14 mai 2022.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <p class="dcube-text-ultra">
+                  Mélanger l'intelligence artificielle et l'intelligence humaine
+                </p>
+                <p class="dcube-text-maxi">
+                  pour rendre l'expérience encore meilleure.
+                </p>
+                <ul class="dcube-text-left dcube-text-great dcube-margin-t3">
+                  Ce qui signifie que vous pouvez :
+                  <li style="margin-top: 10px">
+                    Utilisez les outils automatiques
+                  </li>
+                  <li>
+                    et corrigez les fautes générées de la reconnaissance vocale
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <ul class="dcube-text-left dcube-text-great">
+                  Si vous voulez que la reconnaissance vocale fonctionne bien
+                  pour vous :
+                  <li style="margin-top: 10px">
+                    Soyez près de votre micro (et par la même occasion, ayez un
+                    bon micro)
+                  </li>
+                  <li>Minimiser les bruits en arrière-plan</li>
+                  <li>Parlez très clairement et pas trop vite</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h3>Le sous-titrage en temps réel au quotidien</h3>
+                <h4 class="dcube-text-small">
+                  sur vos ordinateurs, tablettes et téléphones.
+                </h4>
+                <ul class="dcube-text-left dcube-margin-t15 dcube-text-small">
+                  <li>
+                    Lorsque vous faites une présentation avec
+                    <a
+                      target="_blank"
+                      title="Pour en savoir plus sur l'affichage des sous-titres avec PowerPoint - nouvelle fenêtre"
+                      href="https://support.microsoft.com/fr-fr/office/pr%C3%A9sentez-avec-des-l%C3%A9gendes-ou-des-sous-titres-automatiques-et-en-temps-r%C3%A9eldans-powerpoint-68d20e49-aec3-456a-939d-34a79e8ddd5f"
+                      >PowerPoint</a
+                    >
+                  </li>
+                  <li>
+                    Lorsque vous dictez avec la
+                    <a
+                      target="_blank"
+                      title="Pour en savoir plus sur la Dictée vocale - nouvelle fenêtre"
+                      href="https://support.microsoft.com/fr-fr/topic/dicter-du-texte-%C3%A0-l-aide-de-la-reconnaissance-vocale-05725ee2-ae2e-438f-847c-b80e754eb50b"
+                      >Dictée vocale</a
+                    >
+                    sous Word
+                  </li>
+                  <li>
+                    Lorsque vous dictez avec la
+                    <a
+                      href="https://support.google.com/a/users/answer/9308956?hl=fr"
+                      target="_blank"
+                      title="Pour en savoir plus sur la Saisie vocale - nouvelle fenêtre"
+                      >Saisie vocale</a
+                    >
+                    sous Google Docs
+                  </li>
+                  <li>
+                    Lorsque vous voulez faire sous-titrer une conversation avec
+                    <a
+                      target="_blank"
+                      title="Pour en savoir plus sur Microsoft Translator - nouvelle fenêtre"
+                      href="https://translator.microsoft.com/"
+                      >Microsoft Translator</a
+                    >
+                  </li>
+                  <li>
+                    Lorsque vous voulez faire sous-titrer une conversation avec
+                    <a
+                      title="Pour en savoir plus sur Live Transcribe sous Android - nouvelle fenêtre"
+                      target="_blank"
+                      href="https://play.google.com/store/apps/details?id=com.google.audio.hearing.visualization.accessibility.scribe&hl=fr&gl=FR"
+                      >Live Transcribe de Google </a
+                    >sous Android
+                  </li>
+                  <li>
+                    Lorsque vous voulez faire sous-titrer vos conversations, vos
+                    appels ou vos vidéos
+                    <a
+                      target="_blank"
+                      title="Pour en savoir plus sur Live Captions d'Apple (EN) - nouvelle fenêtre"
+                      href="https://www.apple.com/newsroom/2022/05/apple-previews-innovative-accessibility-features/"
+                      >Live Captions d'Apple</a
+                    >
+                    (prochainement disponible sous IOS 16 sur les terminaux
+                    IPhone, IPad et Mac)
+                  </li>
+                  <li>
+                    Dès qu'il y a du son sur votre PC, ça sous-titre avec
+                    <a
+                      target="_blank"
+                      title="Pour en savoir plus sur Live Captions de Microsoft - nouvelle fenêtre"
+                      href="https://www.moyens.net/comment/comment-activer-et-utiliser-les-sous-titres-dynamiques-sur-windows-11/"
+                      >Live Captions de Microsoft</a
+                    >
+                    sous Windows 11 (disponible en anglais, prochainement en
+                    français)
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/emma11y/sous-titres/"
+                      target="_blank"
+                      title="Consultez la liste des outils automatiques - nouvelle fenêtre"
+                      >Et pleins d'autres outils automatiques...</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <h3>
+                    <a
+                      href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/glossaire/#media-temporel-type-son-video-et-synchronise"
+                      target="_blank"
+                      title="Critères RGAA - nouvelle fenêtre"
+                      >Critères RGAA</a
+                    >
+                  </h3>
+                  <p>
+                    Critère 4.1. Chaque média temporel pré-enregistré a-t-il, si
+                    nécessaire, une transcription textuelle ou une
+                    audiodescription (hors cas particuliers) ?
+                  </p>
+                  <p>
+                    Critère 4.2. Pour chaque média temporel pré-enregistré ayant
+                    une transcription textuelle ou une audiodescription
+                    synchronisée, celles-ci sont-elles pertinentes (hors cas
+                    particuliers) ?
+                  </p>
+                  <p>
+                    Critère 4.3. Chaque média temporel synchronisé
+                    pré-enregistré a-t-il, si nécessaire, des sous-titres
+                    synchronisés (hors cas particuliers) ?
+                  </p>
+                  <p>
+                    Critère 4.4. Pour chaque média temporel synchronisé
+                    pré-enregistré ayant des sous-titres synchronisés, ces
+                    sous-titres sont-ils pertinents ?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block">
+                  <h3>
+                    <a
+                      href="https://checklists.opquast.com/fr/assurance-qualite-web/chaque-contenu-audio-et-video-est-accompagne-de-sa-transcription-textuelle"
+                      title="Règle Opquast - nouvelle fenêtre"
+                      >Règle Opquast</a
+                    >
+                  </h3>
+                  <p>
+                    Règle n° 116 - Chaque contenu audio et vidéo est accompagné
+                    de sa transcription textuelle.
+                  </p>
+                  <p>
+                    Les vidéos et sons contiennent des textes qui ne sont pas
+                    perceptibles par les non-voyants, les sourds ou les moteurs
+                    de recherche. Cette bonne pratique montre comment faire en
+                    sorte que ces contenus soient lisibles et indexés.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block"><h3>Ressources</h3></div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <!-- #wrapper -->
+      <footer id="footer" role="contentinfo">
+        <div
+          id="owner-info"
+          class="owner-info dcube-modal dcube-edito"
+          role="dialog"
+          tabindex="-1"
+          style="display: none"
+          data-close="Fermer les informations éditeur"
+        >
+          <div role="document" tabindex="0">
+            <p>
+              <a
+                href="https://accesslide.net/"
+                target="_blank"
+                aria-label="AccesSlide créé par Access42 (Nouvelle fenêtre)"
+                >AccesSlide créé par Access42</a
+              >, tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </footer>
+      <div
+        id="help-info"
+        class="help-info dcube-modal dcube-edito"
+        role="dialog"
+        tabindex="-1"
+        style="display: none"
+        data-close="Fermer l'aide"
+      >
+        <div role="document" tabindex="0">
+          <div class="dcube-cols">
+            <div class="col-1-2">
+              <h2>Navigation</h2>
+              <p>
+                Pour passer d’une page à une autre, vous disposez des boutons
+                «&nbsp;Suivant&nbsp;» et «&nbsp;Précédent&nbsp;».
+              </p>
+              <p>
+                Sur appareil mobile, vous avez la possibilité de changer de page
+                en balayant l’écran&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  de la droite vers la gauche, pour passer à la page
+                  suivante&nbsp;;
+                </li>
+                <li>
+                  de la gauche vers la droite, pour revenir à la page
+                  précédente.
+                </li>
+              </ul>
+              <h3>Navigation avec lecteur d’écran sur appareils mobiles</h3>
+              <p>
+                Si vous utilisez un lecteur d’écran sur mobile, ces actions sont
+                différentes selon votre logiciel&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  sur Android avec <span lang="en">TalkBack</span>&nbsp;:
+                  l’action se réalise avec deux doigts sur l’écran (les deux
+                  doigts doivent &ecirc;tre suffisamment espacés l’un de
+                  l’autre)&nbsp;;
+                </li>
+                <li>
+                  sur <span lang="en">iPhone</span> avec
+                  <span lang="en">VoiceOver</span>&nbsp;: effectuer un double
+                  tap prolongé et maintenir le doigt appuyé quelques secondes
+                  puis balayer l’écran vers la gauche ou la droite.
+                </li>
+                <li>
+                  Si ces actions ne sont pas effectives, vous devez retourner en
+                  haut de page pour atteindre les boutons «&nbsp;Suivant&nbsp;»
+                  et «&nbsp;Précédent&nbsp;».
+                </li>
+              </ul>
+              <h3>Navigation au clavier</h3>
+              <table class="dcube-table-fixed">
+                <caption class="sr">
+                  Navigation au clavier
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Touche</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>CTRL + Espace</kbd>
+                    </td>
+                    <td>
+                      Page suivante avec la dernière version de NVDA ou
+                      <span lang="en">JAWS</span> 18
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>Espace</kbd> ou <kbd>Flèche droite</kbd>
+                    </td>
+                    <td>Page suivante dans les autres cas</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>MAJ + CTRL + Espace</kbd>
+                    </td>
+                    <td>
+                      Page précédente avec la dernière version de NVDA ou
+                      <span lang="en">JAWS</span> 18
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>MAJ + Espace</kbd> ou <kbd>Flèche gauche</kbd>
+                    </td>
+                    <td>Page précédente dans les autres cas</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha"><kbd>Début</kbd></td>
+                    <td>Première page</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha"><kbd>Fin</kbd></td>
+                    <td>Dernière page</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>ALT + 0 (zéro)</kbd>
+                    </td>
+                    <td>Sommaire</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-1-2">
+              <h2>Options d’accessibilité</h2>
+              <p>
+                <span lang="en">AccessReader</span> propose plusieurs options
+                d’accessibilité à configurer dans le volet
+                «&nbsp;Configuration&nbsp;».
+              </p>
+              <h3>Dyslexie</h3>
+              <p>
+                Pour un meilleur confort de lecture, cochez les options
+                «&nbsp;Police adaptée&nbsp;» et «&nbsp;Interlignage
+                adapté&nbsp;».
+              </p>
+              <h3>Contraste</h3>
+              <p>
+                <span lang="en">AccessReader</span> propose trois niveaux de
+                contraste&nbsp;:
+              </p>
+              <ul>
+                <li>par défaut&nbsp;;</li>
+                <li>inversé&nbsp;;</li>
+                <li>renforcé.</li>
+              </ul>
+              <h3>Vocalisation</h3>
+              <p>
+                Vous pouvez sélectionner, à la section
+                «&nbsp;Accessibilité&nbsp;», différentes options sonores.
+              </p>
+              <p>
+                Vous pouvez choisir les actions qui déclencheront un signal
+                sonore (chaque signal sonore est différent en fonction de
+                l’action)&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  Page&nbsp;: émet un bip lorsque vous arrivez sur une nouvelle
+                  page
+                </li>
+                <li>
+                  Début&nbsp;: émet un bip lorsque vous atteignez la première
+                  page
+                </li>
+                <li>
+                  Fin&nbsp;: émet un bip lorsque vous atteignez la dernière page
+                </li>
+              </ul>
+              <p>
+                Vous pouvez également choisir des éléments supplémentaires à
+                vocaliser&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  Numéro&nbsp;: vocalise le numéro de la page à son affichage
+                </li>
+                <li>
+                  Titre&nbsp;: vocalise le titre de la page à son affichage
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear dcube-margin-t2">
+            <h2>
+              Conseils pour l’utilisation d’<span lang="en">AccessReader</span>
+              avec un lecteur d’écran
+            </h2>
+            <div class="col-1-2">
+              <p>
+                <strong>Note </strong>&nbsp;:
+                <span lang="en">AccessReader</span> a été utilisé avec les
+                lecteurs d’écran suivants&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  Windows&nbsp;: NVDA 2017.3 avec Firefox 55 et
+                  <span lang="en">Internet Explorer</span> 11&nbsp;;
+                </li>
+                <li>
+                  Windows&nbsp;: <span lang="en">JAWS</span> version 18 avec
+                  <span lang="en">Internet Explorer</span> 11&nbsp;;
+                </li>
+                <li>
+                  Mac&nbsp;: <span lang="en">Sierra</span> avec
+                  <span lang="en">VoiceOver</span> et Safari.
+                </li>
+                <li>Linux&nbsp;: Ubuntu 14 avec Orca et Firefox 30.</li>
+              </ul>
+              <h3>
+                Recommandations pour la configuration avec un lecteur d’écran
+              </h3>
+              <ol>
+                <li>
+                  Rechercher le bouton «&nbsp;Ouvrir la configuration&nbsp;» (il
+                  se trouve en bas de page).
+                </li>
+                <li>
+                  Choisir la police, l’interlignage et les contrastes les plus
+                  adaptés à sa vision.
+                </li>
+                <li>
+                  Dans la partie «&nbsp;Accessibilité&nbsp;», on peut choisir de
+                  cocher ou non des cases à cocher pour&nbsp;:
+                  <ul>
+                    <li>vocaliser les numéros de page,</li>
+                    <li>
+                      entendre des bips quand on arrive à la première ou la
+                      dernière page,
+                    </li>
+                    <li>vocaliser le titre de la page en cours.</li>
+                  </ul>
+                </li>
+                <li>
+                  Veiller à ce que la case «&nbsp;désactive l’action du clic
+                  pour afficher la page suivante&nbsp;» soit décochée, (NVDA et
+                  <span lang="en">JAWS</span>). Pour
+                  <span lang="en">VoiceOver</span> et Orca, cela ne semble pas
+                  avoir d’incidence.
+                </li>
+                <li>
+                  Dans la partie «&nbsp;lecteur&nbsp;», on peut choisir
+                  d’afficher ou non le sommaire et de consulter le document en
+                  mode page à page ou en mode plan. Dans le cas du mode plan,
+                  toutes les pages seront affichées en mode linéaire. Elles
+                  seront séparées par des titres de niveau 2. Dans le cas du
+                  mode page, il faudra appuyer sur suivant ou sur espace pour
+                  afficher la page suivante.
+                </li>
+              </ol>
+              <h3>
+                Note sur l’utilisation des commandes du lecteur avec un lecteur
+                d’écran
+              </h3>
+              <p>
+                L’appui sur la barre d’espace pour aller à la page suivante ne
+                fonctionne pas avec NVDA et Firefox&nbsp;<abbr
+                  title="version supérieure ou égale à"
+                  >≥</abbr
+                >55, ni avec <span lang="en">JAWS</span> et Internet
+                <span lang="en">Explorer</span>&nbsp;<abbr
+                  title="version supérieure ou égale à"
+                  >≥</abbr
+                >11. Dans ces deux cas, il faut utiliser le raccourci
+                <kbd>CTRL + Espace</kbd> pour passer à la page suivante, et
+                <kbd>MAJ + CTRL + Espace</kbd> pour passer à la page précédente.
+              </p>
+              <p>
+                L’appui sur les autres touches pour aller au début et à la fin
+                du document ne fonctionnent pas non plus avec
+                <span lang="en">JAWS</span> et NVDA. Pour pallier ce problème :
+              </p>
+              <ul>
+                <li>
+                  dans NVDA, appuyer sur <kbd>NVDA + F2</kbd> pour ignorer
+                  l’appui sur la touche suivante ;
+                </li>
+                <li>
+                  dans <span lang="en">JAWS</span>, appuyer sur
+                  <kbd><span lang="en">JAWS</span> + 3</kbd> du pavé
+                  alphanumérique pour ignorer l’appui sur la touche suivante.
+                </li>
+              </ul>
+              <p>
+                <span lang="en">VoiceOver</span> et Orca gèrent très bien la
+                navigation à la page suivante, avec espace, page précédente avec
+                <kbd>SHIFT + espace</kbd>, début et fin de support de
+                présentation.
+              </p>
+              <p>
+                Par contre l’utilisation des flèches droite et gauche ne
+                fonctionne avec aucun des lecteurs d’écran mentionnés ci-dessus.
+              </p>
+            </div>
+            <div class="col-1-2">
+              <h3>
+                Utilisation du dialogue de configuration avec un lecteur d’écran
+              </h3>
+              <p>
+                Lorsqu’on ouvre la configuration, une
+                «&nbsp;Fen&ecirc;tre&nbsp;» apparaît.
+                <span lang="en">VoiceOver</span> annonce
+                «&nbsp;paramètres&nbsp;» avec 7 éléments. Chaque catégorie est
+                annoncée comme «&nbsp;groupe&nbsp;» par
+                <span lang="en">VoiceOver</span>&nbsp;: exemple dyslexie,
+                contrastes, accessibilité, effets (groupe).
+                <span lang="en">VoiceOver</span> annonce le nombre d’éléments
+                dans chaque catégorie. Pour ouvrir une catégorie, appuyer sur
+                <kbd>VO + Majuscule + flèche bas</kbd>.
+              </p>
+              <p>
+                Pour modifier les paramètres accessibilité, une fois que
+                <span lang="en">VoiceOver</span> annonce accessibilité,
+                interagir à l’aide de VO+majuscule+flèche bas et se déplacer
+                parmi les boutons. <span lang="en">VoiceOver</span> n’annonce
+                pas le titre associé à chaque bouton.
+              </p>
+              <p>
+                Avec les autres lecteurs d’écran, il suffit, une fois que la
+                fen&ecirc;tre a été ouverte, d’utiliser la tabulation et
+                d’effectuer les choix souhaités en cochant les éléments à l’aide
+                de la barre d’espace.
+              </p>
+              <p>
+                Veillez à ne pas dépasser le bouton «&nbsp;Enregistrer&nbsp;»
+                car on risque de se retrouver dans la barre d’adresses du
+                navigateur et il est difficile de revenir en arrière.
+              </p>
+              <h3>Autres petits dysfonctionnements des lecteurs d’écran</h3>
+              <h3>NVDA et Orca</h3>
+              <p>
+                Lorsqu’on passe à la page suivante ou précédente et que la
+                vocalisation des numéros de pages est cochée, NVDA et Orca
+                annoncent « null » puis le numéro de page. Pour les chiffres
+                supérieurs à 10, ils continuent d’annoncer 1, 2, 3… Seules les
+                dizaines, 10, 20, 30… sont annoncées correctement.
+              </p>
+              <p>
+                L’annonce des numéros de pages est correcte avec
+                <span lang="en">JAWS</span> à partir de la version 15 et
+                <span lang="en">VoiceOver</span>.
+              </p>
+              <h3><span lang="en">JAWS</span></h3>
+              <p>
+                Si vous utilisez <span lang="en">JAWS</span>, la version 14 du
+                logiciel ne fonctionne pas bien avec Firefox. Préférer
+                l’utilisation du lecteur avec
+                <span lang="en">Internet Explorer</span>. JAWS 14 ne vocalise
+                pas les numéros de page ni leur titre.
+              </p>
+              <p>
+                Pour toute question concernant l’utilisation d’<span lang="en"
+                  >Accessreader</span
+                >
+                avec un lecteur d’écran, ne pas hésiter à
+                <a href="mailto:bonjour@access42.net">nous contacter</a>.
+              </p>
+            </div>
+          </div>
+          <div class="clear dcube-margin-t2">
+            <div class="col-1-2">
+              <h2>Structure des titres</h2>
+              <p>
+                Le premier titre de niveau 1 (<code>h1</code>) rencontré dans la
+                page contient le titre du support de présentation. Ce titre de
+                niveau 1 reste le même tout au long du support de présentation.
+              </p>
+              <p>
+                Ensuite, chaque grande section du support de présentation est
+                titrée par un titre de niveau 2 (<code>h2</code>).
+              </p>
+              <p>
+                À l’intérieur d’une grande section, les sous-sections peuvent
+                être titrées par des titres de niveau 3 (<code>h3</code>) ou par
+                un niveau de titre encore inférieur.
+              </p>
+              <p>
+                Cette structure de titres peut sembler incohérente lorsqu’elle
+                est vocalisée : en effet, on passe parfois d’un
+                <code>h1</code> à un <code>h3</code>, voire à un titre de niveau
+                inférieur. Elle n’en reste pas moins cohérente à l’échelle du
+                document, et parfaitement valide au regard de la norme HTML 5.
+              </p>
+              <p>
+                Par ailleurs, lorsqu’on se trouve dans une sous-section, un fil
+                d’ariane cliquable apparaît après l’en-tête du document, et
+                permet de retourner au début de la grande section concernée si
+                besoin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="nav-wrapper" class="tool-bar footer-nav clearfix" tabindex="0">
+        <div id="wrappernav">
+          <div class="dcube-footer">
+            <div>
+              <img
+                alt=""
+                src="img/icons/link.svg"
+                class="dcube-icon dcube-icon-white"
+              />
+              <img
+                alt=""
+                src="img/icons/link-blue.svg"
+                class="dcube-icon dcube-icon-blue"
+              /><a href="https://dcube.fr" title="Consulter le site Dcube"
+                >dcube.fr</a
+              >
+            </div>
+            <div>
+              <img
+                alt=""
+                src="img/icons/twitter.svg"
+                class="dcube-icon dcube-icon-white"
+              />
+              <img
+                alt=""
+                src="img/icons/twitter-blue.svg"
+                class="dcube-icon dcube-icon-blue"
+              /><a
+                href="https://twitter.com/eaboaf_"
+                title="Suivez Emmanuelle ABOAF sur Twitter"
+                >eaboaf_</a
+              >
+            </div>
+            <div>
+              <img
+                alt=""
+                src="img/icons/github.svg"
+                class="dcube-icon dcube-icon-white"
+              />
+              <img
+                alt=""
+                src="img/icons/github-blue.svg"
+                class="dcube-icon dcube-icon-blue"
+              /><a
+                href="https://github.com/emma11y/"
+                title="Suivez Emmanuelle ABOAF sur GitHub"
+                >emma11y</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="setting"
+        class="tool-block tool-block-settings"
+        role="dialog"
+        tabindex="-1"
+        style="display: none"
+      ></div>
+    </div>
+    <div id="Caudio"></div>
+    <div
+      id="Dcourante"
+      aria-live="polite"
+      aria-atomic="true"
+      aria-hidden="true"
+    ></div>
+    <script src="js/slide.js"></script>
+    <script src="js/afontgarde.js"></script>
+    <script>
+      AFontGarde("FontAwesome", {
+        glyphs: "",
+        success: function () {
+          console.log("success");
+        },
+        error: function () {
+          console.log("timeout error");
+        },
+        timeout: 1e4
+      });
+    </script>
+    <script type="text/javascript" src="js/AccessTooltip.js"></script>
+    <script type="text/javascript" src="js/Toggle.js"></script>
+    <script type="text/javascript">
+      AccessTooltip({
+        objs: "a, button, input, textarea, select,abbr,img",
+        tooltipClassName: "access-tooltip",
+        toolTipBetween: 2,
+        toolTipUp: !0,
+        mouse: !0,
+        tempDelay: 1e3,
+        useAriaDP: !1,
+        useEscClose: !0
+      });
+    </script>
+    <script src="js/AccessNote.js" type="text/javascript"></script>
+    <script>
+      AccessNote();
+    </script>
+  </body>
+</html>
