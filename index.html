@@ -899,6 +899,23 @@
                       >2 juin 2022</a
                     >
                   </blockquote>
+
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      Aujourd’hui c’est son point faible, soit l’IA en détecte
+                      trop (au moindre changement de ton ou de puissance de la
+                      voix par ex.) soit pas assez comme c’est le cas ici. Nous
+                      travaillons à l’analyse de l’image et de la ponctuation
+                      pour espérer placer des tirets où il faut.
+                    </p>
+                    &mdash; @matt_parmentier
+                    <a
+                      href="https://twitter.com/matt_parmentier/status/1519899494556610562?s=20&t=Lw1UCZSj4AP43cjCtIUdcg"
+                      title="Consulter le tweet de @matt_parmentier du 29 avril 2022 - nouvelle fenêtre"
+                      target="_blank"
+                      >29 avril 2022</a
+                    >
+                  </blockquote>
                 </div>
               </div>
             </div>
@@ -1076,9 +1093,9 @@
                 <div class="dcube-block">
                   <h3>
                     <a
-                      href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/glossaire/#media-temporel-type-son-video-et-synchronise"
+                      href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#topic4"
                       target="_blank"
-                      title="Critères RGAA - nouvelle fenêtre"
+                      title="Consulter les critères RGAA - nouvelle fenêtre"
                       >Critères RGAA</a
                     >
                   </h3>
@@ -1103,6 +1120,87 @@
                     pré-enregistré ayant des sous-titres synchronisés, ces
                     sous-titres sont-ils pertinents ?
                   </p>
+                  <div class="toggle-gp-article toggle-gp dcube-toggle-box">
+                    <button
+                      class="dcube-btn dcube-btn-toggle"
+                      aria-expanded="false"
+                      aria-controls="vocabulaire-1"
+                    >
+                      Définition d'un média temporel
+                    </button>
+                    <div
+                      id="vocabulaire-1"
+                      class="content-to-toggle is-hidden dcube-text-micro"
+                    >
+                      <ul>
+                        <li>
+                          Média temporel seulement audio : contenu sonore (Wav,
+                          Mp3…) ;
+                        </li>
+                        <li>
+                          Média temporel seulement vidéo : images ou photos en
+                          mouvement ou en séquence ;
+                        </li>
+                        <li>
+                          Média temporel synchronisé : flux audio ou vidéo
+                          synchronisé avec un autre format pour présenter de
+                          l’information et/ou comportant des composants
+                          temporels interactifs. Un média temporel peut être
+                          consulté de 2 manières différentes :
+                          <ul>
+                            <li>
+                              Fichier à télécharger consultable avec un logiciel
+                              externe à la page web ;
+                            </li>
+                            <li>
+                              Contenu embarqué dans la page web et consultable
+                              dans la page web via :
+                              <ul>
+                                <li>
+                                  Un plugin (par exemple une vidéo diffusée par
+                                  un lecteur Flash) ;
+                                </li>
+                                <li>
+                                  L’élément <code>video</code> (par exemple une
+                                  vidéo) ;
+                                </li>
+                                <li>
+                                  L’élément <code>audio</code> (par exemple un
+                                  podcast) ;
+                                </li>
+                                <li>
+                                  L’élément <code>svg</code> (par exemple un
+                                  dessin animé vectoriel) ;
+                                </li>
+                                <li>
+                                  L’élément <code>canvas</code> (par exemple un
+                                  dessin animé en image bitmap) ;
+                                </li>
+                                <li>
+                                  L’élément <code>bgsound</code> pour diffuser
+                                  un arrière-plan sonore à la page web.
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>
+                        Un média temporel peut être diffusé en temps réel ou
+                        être proposé en lecture de manière asynchrone (média
+                        pré-enregistré).
+                      </p>
+                      <p>
+                        Source :
+                        <a
+                          target="_blank"
+                          title="Consulter la définition du média temporel - nouvelle fenêtre"
+                          href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/glossaire/#media-temporel-type-son-video-et-synchronise"
+                          >Média temporel type son vidéo et synchronisé</a
+                        >
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div
@@ -1112,7 +1210,7 @@
                   <h3>
                     <a
                       href="https://checklists.opquast.com/fr/assurance-qualite-web/chaque-contenu-audio-et-video-est-accompagne-de-sa-transcription-textuelle"
-                      title="Règle Opquast - nouvelle fenêtre"
+                      title="Consulter la règle Opquast - nouvelle fenêtre"
                       >Règle Opquast</a
                     >
                   </h3>
@@ -1131,10 +1229,228 @@
             </div>
           </section>
 
-          <section class="slide dcube-page-full dcube-bgcolor-c2">
+          <section class="slide dcube-page-full dcube-bg-color-c2">
+            <div class="inside">
+              <div class="dcube-block">
+                <h3
+                  class="titre dcube-subtitle dcube-subtitle-dry dcube-margin-b0"
+                >
+                  Expérimentation de France TV Lab
+                </h3>
+
+                <div class="dcube-video">
+                  <video controls>
+                    <source src="videos/francetvlab.mp4" type="video/mp4" />
+
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+                <p
+                  class="center dcube-margin-t1 dcube-margin-b3 dcube-text-micro"
+                >
+                  <a
+                    target="_blank"
+                    title="Consulter le site pour tester et évaluer la solution de sous-titrage
+                    automatique de franceinfo - nouvelle fenêtre"
+                    href="https://www.francetvlab.fr/tests/testez-et-evaluez-notre-solution-de-sous-titrage-automatique-de-franceinfo"
+                    >Testez et évaluez la solution de sous-titrage automatique
+                    de franceinfo</a
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col">
+                <div class="dcube-block">
+                  <h3>Ressources</h3>
+                  <h4 class="dcube-text-great">Deepgram</h4>
+                  <ul class="dcube-text-small">
+                    <li>
+                      <a
+                        target="_blank"
+                        title="Consulter la documentation de Deepgram sur l'API - nouvelle fenêtre"
+                        href="https://developers.deepgram.com/api-reference/"
+                        ><span lang="en">API Reference (EN)</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        target="_blank"
+                        title="Consulter la documentation de Deepgram sur le SDK en Node  - nouvelle fenêtre"
+                        href="https://developers.deepgram.com/sdks-tools/sdks/node-sdk/"
+                        ><span lang="en">Node SDK (EN)</span></a
+                      >
+                    </li>
+                  </ul>
+                  <h4 class="dcube-text-great">Google</h4>
+                  <ul class="dcube-text-small">
+                    <li>
+                      <a
+                        target="_blank"
+                        title="Consulter la documentation de Google sur le cloud Speech-To-Text"
+                        href="https://cloud.google.com/speech-to-text/docs/"
+                        >Documentation sur le Cloud Speech-To-Text</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        target="_blank"
+                        title="Consulter le GitHub de Google sur Node.js Speech - nouvelle fenêtre"
+                        href="https://github.com/googleapis/nodejs-speech"
+                        ><span lang="en">Node.js Speech (EN)</span></a
+                      >
+                    </li>
+                  </ul>
+                  <h4 class="dcube-text-great">Microsoft</h4>
+                  <ul class="dcube-text-small">
+                    <li>
+                      <a
+                        href="https://docs.microsoft.com/fr-fr/azure/cognitive-services/Speech-Service/"
+                        target="_blank"
+                        title="Consulter la documentation de Microsoft sur le service Speech"
+                        >Documentation du service Speech</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        target="_blank"
+                        title="Consulter la documentation de Microsoft pour un démarrage rapide du service Speech - nouvelle fenêtre"
+                        href="https://docs.microsoft.com/fr-fr/azure/cognitive-services/speech-service/get-started-speech-to-text?tabs=windowsinstall%2Cterminal&pivots=programming-language-javascript"
+                      >
+                        Démarrage rapide : reconnaître et convertir la parole en
+                        texte</a
+                      >
+                    </li>
+                  </ul>
+                  <h4 class="dcube-text-great">Mozilla</h4>
+                  <ul class="dcube-text-small">
+                    <li>
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API"
+                        title="Consulter la documentation de Mozilla sur MediaStream Recording API - nouvelle fenêtre"
+                        target="_blank"
+                        ><span lang="en"
+                          >MediaStream Recording API (EN)</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
+                        title="Consulter la documentation de Mozilla sur Web Speech API - nouvelle fenêtre"
+                        target="_blank"
+                        ><span lang="en">Web Speech API (EN)</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-bgcolor-c2">
+                <div class="dcube-block">
+                  <h4 class="dcube-text-great">Projets</h4>
+                  <ul class="dcube-text-small">
+                    <li>
+                      <a
+                        href="https://commonvoice.mozilla.org/fr"
+                        title="Consulter le projet Common Voice Mozilla - nouvelle fenêtre"
+                        target="_blank"
+                        ><span lang="en">Common Voice Mozilla (EN)</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://sites.research.google/euphonia/about/"
+                        title="Consulter le projet Euphonia - nouvelle fenêtre"
+                        target="_blank"
+                        >Euphonia (EN)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://voiceitt.com/"
+                        title="Consulter le site web VoiceITT - nouvelle fenêtre"
+                        target="_blank"
+                        >VoiceITT (EN)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://team.inria.fr/multispeech/fr/"
+                        title="Consulter les informations sur le projet multispeech"
+                        target="_blank"
+                        >Multispeech</a
+                      >
+                    </li>
+                  </ul>
+                  <h4 class="dcube-text-great">Autres</h4>
+                  <ul class="dcube-text-small">
+                    <li>
+                      <a
+                        href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-speech-overview"
+                        title="Consulter la documentation sur Custom Speech - nouvelle fenêtre"
+                        target="_blank"
+                        ><span lang="en">Custom Speech (EN)</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://interstices.info/la-traduction-automatique-statistique-comment-ca-marche/"
+                        title="Consulter l'article La traduction automatique statistique, comment ça
+                        marche ? - nouvelle fenêtre"
+                        target="_blank"
+                        >La traduction automatique statistique, comment ça
+                        marche ?</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.inria.fr/fr/reconnaissance-vocale-et-respect-de-la-vie-privee-la-voix-inria-se-fait-entendre"
+                        title="Consulter l'article Reconnaissance vocale et respect de la vie privée : la voix Inria se fait entendre - nouvelle fenêtre"
+                        target="_blank"
+                        >Reconnaissance vocale et respect de la vie privée : la
+                        voix Inria se fait entendre</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/emma11y/sous-titres"
+                        title="Consulter la liste des outils pour sous-titrer ou transcrire - nouvelle fenêtre"
+                        target="_blank"
+                        >Comment sous-titrer vos vidéos et vos podcasts et avec
+                        quels outils ?</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c4a">
             <div class="inside dcube-align-center center">
               <div class="dcube-block">
-                <h3>Ressources</h3>
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Merci !</span
+                  >
+                </h2>
+                <ul class="dcube-text-left">
+                  <li>Retrouvez ma présentation</li>
+                  <li>Retrouvez ma transcription écrite de ma présentation</li>
+                  <li>
+                    <a
+                      title="Consulter les sources du projet Speech-To-Text"
+                      href="https://github.com/emma11y/speech-to-text"
+                      target="_blank"
+                      >Retrouvez les sources de mon projet Speech-To-Text en
+                      Angular</a
+                    >
+                  </li>
+                  <li>Donnez votre feedback sur cette présentation</li>
+                </ul>
               </div>
             </div>
           </section>
@@ -1560,7 +1876,10 @@
                 alt=""
                 src="img/icons/link-blue.svg"
                 class="dcube-icon dcube-icon-blue"
-              /><a href="https://dcube.fr" title="Consulter le site Dcube"
+              /><a
+                href="https://dcube.fr"
+                title="Consulter le site Dcube - nouvelle fenêtre"
+                target="_blank"
                 >dcube.fr</a
               >
             </div>
@@ -1576,7 +1895,8 @@
                 class="dcube-icon dcube-icon-blue"
               /><a
                 href="https://twitter.com/eaboaf_"
-                title="Suivez Emmanuelle ABOAF sur Twitter"
+                title="Suivez Emmanuelle ABOAF sur Twitter - nouvelle fenêtre"
+                target="_blank"
                 >eaboaf_</a
               >
             </div>
@@ -1592,7 +1912,8 @@
                 class="dcube-icon dcube-icon-blue"
               /><a
                 href="https://github.com/emma11y/"
-                title="Suivez Emmanuelle ABOAF sur GitHub"
+                title="Suivez Emmanuelle ABOAF sur GitHub - nouvelle fenêtre"
+                target="_blank"
                 >emma11y</a
               >
             </div>
