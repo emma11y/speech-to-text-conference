@@ -65,22 +65,28 @@
     />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="" />
+    <meta
+      property="og:description"
+      content="On utilise de plus en temps d'outils automatiques pour dicter ses notes, écrire ses messages, transcrire des podcasts, sous-titrer des vidéos ou afficher en temps-réel les sous-titres pendant les réunions et conférences. Pourquoi la transcription automatique, venant des APIs Speech-To-Text, est efficace pour certaines personnes ou situations ? Pourquoi elle ne l'est pas pour d'autres ? Pourquoi nous ne sommes pas égaux face au Speech-To-Text ?"
+    />
     <meta
       property="og:url"
       content="https://emma11y.github.io/speech-to-text-conference"
     />
-    <meta property="og:site_name" content="DCube" />
+    <meta property="og:site_name" content="dcube" />
     <meta property="article:tag" content="accessibilité" />
     <meta property="article:tag" content="a11y" />
     <meta property="article:tag" content="speech-to-text" />
+    <meta property="article:tag" content="ia" />
+    <meta property="article:tag" content="intelligence artificielle" />
+    <meta property="article:tag" content="speech recognition" />
     <meta
       property="og:image"
-      content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"
+      content="https://emma11y.github.io/speech-to-text-conference/cover.png"
     />
     <meta
       property="og:image:secure_url"
-      content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"
+      content="https://emma11y.github.io/speech-to-text-conference/cover.png"
     />
     <meta property="og:image:width" content="1350" />
     <meta property="og:image:height" content="675" />
@@ -89,11 +95,14 @@
       content="API Speech-To-Text : quelles sont ses avantages et ses limites ? – Support de présentation -  DCube"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="" />
+    <meta
+      name="twitter:description"
+      content="On utilise de plus en temps d'outils automatiques pour dicter ses notes, écrire ses messages, transcrire des podcasts, sous-titrer des vidéos ou afficher en temps-réel les sous-titres pendant les réunions et conférences. Pourquoi la transcription automatique, venant des APIs Speech-To-Text, est efficace pour certaines personnes ou situations ? Pourquoi elle ne l'est pas pour d'autres ? Pourquoi nous ne sommes pas égaux face au Speech-To-Text ?"
+    />
     <meta name="twitter:site" content="@eaboaf_" />
     <meta
       name="twitter:image"
-      content="https://emma11y.github.io/speech-to-text-conference/favicon-32x32.png"
+      content="https://emma11y.github.io/speech-to-text-conference/cover.png"
     />
     <meta name="twitter:creator" content="@eaboaf_" />
   </head>
@@ -111,14 +120,14 @@
           <a
             href="https://dcube.fr/"
             target="_blank"
-            aria-label="Consulter le site de DCube"
+            title="Consulter le site de dcube ( nouvelle fenêtre"
             class="main-logo"
           >
             <img
               src="img_slide/dcube/logo_dcube_bleu.png"
               id="logo"
               role="img"
-              aria-label="Logo de DCube"
+              alt=""
             />
           </a>
         </header>
@@ -154,7 +163,7 @@
                     src="img_slide/dcube/logo_dcube_blanc.png"
                     id="logo"
                     role="img"
-                    aria-label="DCube"
+                    alt="Logo de dcube"
                     width="58"
                     height="43"
                   />
@@ -166,27 +175,6 @@
               </div>
             </div>
           </section>
-
-          <!-- Plan -->
-          <!-- <section class="slide dcube-page-full">
-         <div class="dcube-page-half-vertical">
-             <div class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2">
-                 <div class="dcube-block center">
-                     <h2 class="dcube-subtitle">Au programme</h2>
-                 </div>
-             </div>
-             <div class="dcube-page-half-vertical_col dcube-align-center-y">
-                 <div class="dcube-block">
-                     <ol class="dcube-text-super">
-                         <li>Sous-titrage des vidéos</li>
-                         <li>Description des images</li>
-                         <li>Ecriture des messages dans les réseaux sociaux</li>
-                         <li>Accessibilité des fichiers PDF</li>
-                     </ol>
-                 </div>
-             </div>
-         </div>
-     </section>-->
 
           <section class="slide dcube-page-full dcube-bgcolor-c2">
             <div class="inside dcube-align-center center">
@@ -278,16 +266,138 @@
 
           <section class="slide dcube-page-full dcube-bg-color-c2">
             <div class="inside">
-              <div class="dcube-block">
-                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+              <div class="dcube-block" style="position: absolute; width: 100%">
+                <h3
+                  class="titre dcube-subtitle dcube-subtitle-dry dcube-margin-b0"
+                >
                   Démo 1 : Samuel
                 </h3>
+
                 <div class="dcube-video">
                   <video controls>
-                    <source src="videos/francetvlab.mp4" type="video/mp4" />
+                    <source src="videos/Samuel - RGAA.mp4" type="video/mp4" />
 
                     Sorry, your browser doesn't support embedded videos.
                   </video>
+                </div>
+                <div
+                  class="toggle-gp-article toggle-gp dcube-toggle-box center dcube-margin-b3"
+                >
+                  <button
+                    class="dcube-btn dcube-btn-toggle"
+                    aria-expanded="false"
+                    aria-controls="transcription-video-1"
+                  >
+                    Transcription de la vidéo de Samuel
+                  </button>
+                  <div
+                    id="transcription-video-1"
+                    class="content-to-toggle is-hidden dcube-text-small"
+                  >
+                    <div
+                      class="dcube-block dcube-transcription center dcube-margin-b1"
+                    >
+                      <h4 class="center">Texte à vocaliser</h4>
+                      <p>
+                        Les services publics numériques et certains services
+                        privés ont l'obligation d'être accessibles de façon
+                        équivalente à tout citoyen, qu'il soit ou non en
+                        situation de handicap (visuel, auditif, moteur, trouble
+                        dys...). Un service numérique accessible est plus facile
+                        à utiliser pour les personnes handicapées et de
+                        meilleure qualité pour tous. Pour faciliter la mise en
+                        œuvre de l'accessibilité numérique, la DINUM édite
+                        depuis 2009 le référentiel général d'amélioration de
+                        l'accessibilité – RGAA, créé pour mettre en œuvre
+                        l'article 47 de la loi handicap de 2005 et son décret
+                        d'application actualisé en 2019. Il fait régulièrement
+                        l'objet de nouvelles versions et mises à jour pour
+                        s'adapter aux évolutions du Web mais aussi aux
+                        changements de normes et réglementations.
+                      </p>
+                    </div>
+                    <div class="dcube-transcription-cols dcube-cols">
+                      <div class="dcube-transcription-col">
+                        <h4>Deepgram</h4>
+                        <p>
+                          Les services publics numérique et certains services
+                          privées ont l'obligation d'être accessible de façon
+                          équivalente à tout citoyen qu'elle soit ou non en
+                          situation de handicap visuel auitif moteur troubles 10
+                          etc un service numérique accessible plus facile à
+                          utiliser pour les personnes handicappées et de qualité
+                          pour tous faciliter la mise en oeuvre de
+                          l'accessibilité numérique la et dite depuis 2009 le
+                          référentiel général d'amélioration de l'accessibilité
+                          rg créée pour mettre en coeure l'article 47 dans la
+                          loi handicap 2005 et son décret d'application actu en
+                          2019 fait réguloèrement l'objet de nouvelles versions
+                          et mises à jour pour s'adapter aux évolutions du web
+                          et aussi au changements de normes et réglementations
+                        </p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Google</h4>
+                        <p>
+                          Les services publics numérique et certains services
+                          privés ont l'obligation d'être accessible de façon
+                          équivalente à tout citoyen qu'ils soient ou non en
+                          situation de handicap visuel auditif moteur trouble et
+                          cetera un service numérique accessible et plus facile
+                          à utiliser pour les personnes handicappées et de
+                          meilleure qualité pour tous pour faciliter la mise en
+                          oeuvre de l'accessibilité numérique l'a dit num et
+                          depuis 2009 le référentiel général d'amélioration de
+                          l'accessibilité RG2 a créé pour mettre en oeuvre
+                          l'article 47 de la loi Handicap 2005 et son décret
+                          d'application actualisant demain il fait régulièrement
+                          l'objet de nouvelle version est mise à jour pour
+                          s'adapter aux évolutions du web mais aussi aux
+                          changements de normes et réglementations
+                        </p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Microsoft</h4>
+                        <p>
+                          les services publics numériques et certains services
+                          privés ont l'obligation d'être accessible de façon
+                          équivalente à tout ciroten qu'il soit ou non en
+                          situation de handicap visuel auditif moteur trouble 10
+                          et cetera un service numérique accessible et plus
+                          facile à utiliser pour les personnes handicappées et
+                          de meilleure qualité pour tous pour faciliter la mise
+                          en oeuvre de l'accessibilité numérique la dinum édite
+                          depuis 2009 le référentiel général d'amélioration de
+                          l'accessibilité RG 2A crée pour mettre en oeuvre
+                          l'article 47 de la loi handicap de 2005 et son décret
+                          d'application actualité en 2019 il fait réulièrement
+                          l'objet de nouvelles versions et mises à jour pour
+                          s'adapter aux évolutions du web mais aussi aux
+                          changements de normes et réglementations
+                        </p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Mozilla</h4>
+                        <p>
+                          les services publics numérique certains services
+                          privés ont l'obligation d'être accessible de façon
+                          équivalente à tout citoyen qu'ils soient ou non en
+                          situation de handicap visuel auditif moteur
+                          trouble.dys cetera un service numérique accessible est
+                          plus facile à utiliser pour les personnes handicappées
+                          et de meilleure qualité pour tous pour faciliter la
+                          mise en oeuvre de l'accessibilité numérique l'a dit
+                          num et dit depuis 2009 le référentiel général
+                          d'amélioration de l'accessibilité RG2 a créé pour
+                          mettre en oeuvre l'article 47 de la loi Handicap 2005
+                          et son décret d'application actualiser en 2019 il fait
+                          régulièrement l'objet de nouvelle version est mise à
+                          jour pour s'adapter aux évolutions d uweb mais aussi
+                          aux changements de normes et réglementations.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -296,9 +406,74 @@
           <section class="slide dcube-page-full dcube-bg-color-c2">
             <div class="inside">
               <div class="dcube-block">
-                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
-                  Démo 2 : Duchesse
+                <h3
+                  class="titre dcube-subtitle dcube-subtitle-dry dcube-margin-b0"
+                >
+                  Démo 2 : Anne-Laure
                 </h3>
+                <div class="dcube-video">
+                  <video controls>
+                    <source src="videos/Anne-Laure-RGAA.mov" type="video/mp4" />
+
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+                <div
+                  class="toggle-gp-article toggle-gp dcube-toggle-box center"
+                >
+                  <button
+                    class="dcube-btn dcube-btn-toggle"
+                    aria-expanded="false"
+                    aria-controls="transcription-video-2"
+                  >
+                    Transcription de la vidéo d'Anne-Laure
+                  </button>
+                  <div
+                    id="transcription-video-2"
+                    class="content-to-toggle is-hidden dcube-text-small center"
+                  >
+                    <div
+                      class="dcube-block dcube-transcription center dcube-margin-b1"
+                    >
+                      <h4 class="center">Texte à vocaliser</h4>
+                      <p>
+                        Les services publics numériques et certains services
+                        privés ont l'obligation d'être accessibles de façon
+                        équivalente à tout citoyen, qu'il soit ou non en
+                        situation de handicap (visuel, auditif, moteur, trouble
+                        dys...). Un service numérique accessible est plus facile
+                        à utiliser pour les personnes handicapées et de
+                        meilleure qualité pour tous. Pour faciliter la mise en
+                        œuvre de l'accessibilité numérique, la DINUM édite
+                        depuis 2009 le référentiel général d'amélioration de
+                        l'accessibilité – RGAA, créé pour mettre en œuvre
+                        l'article 47 de la loi handicap de 2005 et son décret
+                        d'application actualisé en 2019. Il fait régulièrement
+                        l'objet de nouvelles versions et mises à jour pour
+                        s'adapter aux évolutions du Web mais aussi aux
+                        changements de normes et réglementations.
+                      </p>
+                    </div>
+                    <div class="dcube-transcription-cols dcube-cols">
+                      <div class="dcube-transcription-col">
+                        <h4>Deepgram</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Google</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Microsoft</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Mozilla</h4>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -306,9 +481,74 @@
           <section class="slide dcube-page-full dcube-bg-color-c2">
             <div class="inside">
               <div class="dcube-block">
-                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+                <h3
+                  class="titre dcube-subtitle dcube-subtitle-dry dcube-margin-b0"
+                >
                   Démo 3 : Emmanuelle
                 </h3>
+                <div class="dcube-video">
+                  <video controls>
+                    <source src="videos/Emmanuelle.mp4" type="video/mp4" />
+
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+                <div
+                  class="toggle-gp-article toggle-gp dcube-toggle-box center"
+                >
+                  <button
+                    class="dcube-btn dcube-btn-toggle"
+                    aria-expanded="false"
+                    aria-controls="transcription-video-3"
+                  >
+                    Transcription de la vidéo d'Emmanuelle
+                  </button>
+                  <div
+                    id="transcription-video-3"
+                    class="content-to-toggle is-hidden dcube-text-small center"
+                  >
+                    <div
+                      class="dcube-block dcube-transcription center dcube-margin-b1"
+                    >
+                      <h4 class="center">Texte à vocaliser</h4>
+                      <p>
+                        Les services publics numériques et certains services
+                        privés ont l'obligation d'être accessibles de façon
+                        équivalente à tout citoyen, qu'il soit ou non en
+                        situation de handicap (visuel, auditif, moteur, trouble
+                        dys...). Un service numérique accessible est plus facile
+                        à utiliser pour les personnes handicapées et de
+                        meilleure qualité pour tous. Pour faciliter la mise en
+                        œuvre de l'accessibilité numérique, la DINUM édite
+                        depuis 2009 le référentiel général d'amélioration de
+                        l'accessibilité – RGAA, créé pour mettre en œuvre
+                        l'article 47 de la loi handicap de 2005 et son décret
+                        d'application actualisé en 2019. Il fait régulièrement
+                        l'objet de nouvelles versions et mises à jour pour
+                        s'adapter aux évolutions du Web mais aussi aux
+                        changements de normes et réglementations.
+                      </p>
+                    </div>
+                    <div class="dcube-transcription-cols dcube-cols">
+                      <div class="dcube-transcription-col">
+                        <h4>Deepgram</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Google</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Microsoft</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Mozilla</h4>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -340,7 +580,7 @@
                       text-align: center;
                     "
                   >
-                    Biais du genre
+                    Problème de biais
                   </h3>
                   <p
                     class="dcube-quote dcube-margin-t15"
@@ -349,6 +589,19 @@
                   >
                     YouTube’s auto captions consistently performed better on
                     male voices than female voice.
+                  </p>
+                  <p
+                    class="dcube-quote dcube-margin-t15"
+                    lang="en"
+                    style="margin: 50px"
+                  >
+                    <a
+                      target="_blank"
+                      title="Racial disparities in automated speech recognition (EN) - nouvelle fenêtre"
+                      href="https://www.pnas.org/doi/10.1073/pnas.1915768117"
+                      >More recent research has found the same effect</a
+                    >: ASR systems make more errors for Black speakers than
+                    white speakers
                   </p>
                   <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
                     Source :
@@ -532,16 +785,61 @@
 
           <section class="slide dcube-page-full dcube-bg-color-c2">
             <div class="inside">
-              <div class="dcube-block">
-                <h3 class="titre dcube-subtitle dcube-subtitle-dry">
+              <div class="dcube-block" style="position: absolute; width: 100%">
+                <h3
+                  class="titre dcube-subtitle dcube-subtitle-dry dcube-margin-b0"
+                >
                   Nouvelle démo de Samuel
                 </h3>
                 <div class="dcube-video">
                   <video autoplay="0" controls>
-                    <source src="videos/francetvlab.mp4" type="video/mp4" />
+                    <source
+                      src="videos/Samuel - Langage non ordinaire.mp4"
+                      type="video/mp4"
+                    />
 
                     Sorry, your browser doesn't support embedded videos.
                   </video>
+                </div>
+                <div
+                  class="toggle-gp-article toggle-gp dcube-toggle-box center dcube-margin-b3"
+                >
+                  <button
+                    class="dcube-btn dcube-btn-toggle"
+                    aria-expanded="false"
+                    aria-controls="transcription-video-4"
+                  >
+                    Transcription de la nouvelle vidéo de Samuel
+                  </button>
+                  <div
+                    id="transcription-video-4"
+                    class="content-to-toggle is-hidden dcube-text-small center"
+                  >
+                    <div
+                      class="dcube-block dcube-transcription center dcube-margin-b1"
+                    >
+                      <h4 class="center">Texte à vocaliser</h4>
+                      <p></p>
+                    </div>
+                    <div class="dcube-transcription-cols dcube-cols">
+                      <div class="dcube-transcription-col">
+                        <h4>Deepgram</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Google</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Microsoft</h4>
+                        <p></p>
+                      </div>
+                      <div class="dcube-transcription-col">
+                        <h4>Mozilla</h4>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -713,22 +1011,33 @@
                 <div class="dcube-block">
                   <h3>La conjugaison</h3>
                   <blockquote class="twitter-tweet">
-                    <div class="dcube-flex">
-                      <p lang="fr" dir="ltr">
-                        Nombre de fois où j’ai regardé les sous-titres
-                        automatiques, ce n’était pas conjugué quand c’était une
-                        femme qui parlait. Exemple avec Microsoft Translator, en
-                        articulant très bien, j’ai réussi à me faire comprendre
-                        et comme vous pouvez le constater, ce n’est pas
-                        conjugué.
-                      </p>
-                      <img
-                        style="margin-left: 1em; margin-bottom: 1em"
-                        alt=" Capture d’écran de Microsoft Translator Il y a deux
+                    <p lang="fr" dir="ltr">
+                      Nombre de fois où j’ai regardé les sous-titres
+                      automatiques, ce n’était pas conjugué quand c’était une
+                      femme qui parlait. Exemple avec Microsoft Translator, en
+                      articulant très bien, j’ai réussi à me faire comprendre et
+                      comme vous pouvez le constater, ce n’est pas conjugué.
+                    </p>
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-margin-b1"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="transcription-img"
+                      >
+                        Description de l'image attaché au tweet
+                      </button>
+                      <div
+                        id="transcription-img"
+                        class="content-to-toggle is-hidden dcube-text-small"
+                      >
+                        <p>
+                          Capture d’écran de Microsoft Translator Il y a deux
                           phrases écrites : « Je suis arrivé » sans e et « Je
-                          suis rentré à la maison » également sans e."
-                        src="https://pbs.twimg.com/media/FElLz7EXoAkH90-?format=jpg&name=900x900"
-                      />
+                          suis rentré à la maison » également sans e.
+                        </p>
+                      </div>
                     </div>
                     &mdash; Emmanuelle ABOAF (@eaboaf_)
                     <a
@@ -738,10 +1047,79 @@
                       >19 novembre 2021</a
                     >
                   </blockquote>
+                  <h4 class="dcube-text-small">Nouvelle démo d'Anne-Laure</h4>
+                  <div class="dcube-video dcube-margin-b3">
+                    <video controls style="width: 100%">
+                      <source
+                        src="videos/Enregistrement Anne-Laure texte Annie.mov"
+                        type="video/mp4"
+                      />
+
+                      Sorry, your browser doesn't support embedded videos.
+                    </video>
+                    <div class="toggle-gp-article toggle-gp dcube-toggle-box">
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="transcription-video-5"
+                      >
+                        Transcription de la vidéo sur la conjugaison
+                      </button>
+                      <div
+                        id="transcription-video-5"
+                        class="content-to-toggle is-hidden dcube-text-small center"
+                      >
+                        <div
+                          class="dcube-block dcube-transcription center dcube-margin-b1"
+                        >
+                          <h4 class="center">Texte à vocaliser</h4>
+                          <p>
+                            Annie est arrivée à la maison. Elle est arrivée à la
+                            maison. Nous, les filles, sommes arrivées à la
+                            maison.
+                          </p>
+                        </div>
+                        <div class="dcube-transcription-cols dcube-cols">
+                          <div class="dcube-transcription-col">
+                            <h4>Deepgram</h4>
+                            <p>
+                              Annie est arrivé à la maison. Elle est arrivée à
+                              la maison. Nous les filles sommes arrivés à la
+                              maison.
+                            </p>
+                          </div>
+                          <div class="dcube-transcription-col">
+                            <h4>Google</h4>
+                            <p>
+                              Annie est arrivé à la maison. Elle est arrivée à
+                              la maison. Nous les filles sommes arrivés à la
+                              maison.
+                            </p>
+                          </div>
+                          <div class="dcube-transcription-col">
+                            <h4>Microsoft</h4>
+                            <p>
+                              Annie est arrivé à la maison. Elle est arrivée à
+                              la maison. Nous les filles sommes arrivés à la
+                              maison.
+                            </p>
+                          </div>
+                          <div class="dcube-transcription-col">
+                            <h4>Mozilla</h4>
+                            <p>
+                              Annie est arrivé à la maison. Elle est arrivée à
+                              la maison. Nous les filles sommes arrivés à la
+                              maison.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="dcube-page-half-vertical_col dcube-align-center">
-                <div class="dcube-block">
+                <div class="dcube-block" style="margin-top: 1em">
                   <h3>Les mots grossiers ou familiers</h3>
                   <blockquote class="twitter-tweet">
                     <p lang="fr" dir="ltr">
@@ -964,10 +1342,10 @@
                 <ul class="dcube-text-left dcube-text-great dcube-margin-t3">
                   Ce qui signifie que vous pouvez :
                   <li style="margin-top: 10px">
-                    Utilisez les outils automatiques
+                    Utiliser les outils automatiques
                   </li>
                   <li>
-                    et corrigez les fautes générées de la reconnaissance vocale
+                    et corriger les fautes générées de la reconnaissance vocale
                   </li>
                 </ul>
               </div>
@@ -1439,7 +1817,7 @@
                 </h2>
                 <ul class="dcube-text-left">
                   <li>Retrouvez ma présentation</li>
-                  <li>Retrouvez ma transcription écrite de ma présentation</li>
+                  <li>Retrouvez la transcription écrite de ma présentation</li>
                   <li>
                     <a
                       title="Consulter les sources du projet Speech-To-Text"
@@ -1472,7 +1850,7 @@
               <a
                 href="https://accesslide.net/"
                 target="_blank"
-                aria-label="AccesSlide créé par Access42 (Nouvelle fenêtre)"
+                title="AccesSlide créé par Access42 - nouvelle fenêtre"
                 >AccesSlide créé par Access42</a
               >, tous droits réservés.
             </p>
@@ -1878,7 +2256,7 @@
                 class="dcube-icon dcube-icon-blue"
               /><a
                 href="https://dcube.fr"
-                title="Consulter le site Dcube - nouvelle fenêtre"
+                title="Consulter le site dcube - nouvelle fenêtre"
                 target="_blank"
                 >dcube.fr</a
               >

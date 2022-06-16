@@ -4612,6 +4612,10 @@ fieldset {
     right: -0.5em;
   }
 
+  .col-1-4 {
+    width: 25%;
+  }
+
   /**
 		 * Column border
 		 */
@@ -5767,4 +5771,57 @@ fieldset {
     margin-top: -2em;
     margin-left: -2em;
   }
+}
+
+.dcube-transcription-cols {
+  position: relative;
+  display: flex;
+}
+
+.dcube-transcription-cols::before,
+.dcube-transcription-cols::after {
+  content: "";
+  display: table;
+}
+
+.dcube-transcription-cols::after {
+  clear: both;
+}
+
+.dcube-transcription-col {
+  margin-right: 1em;
+  width: 25%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 69.99em) {
+  .dcube-transcription-cols {
+    position: relative;
+    display: block;
+  }
+
+  .dcube-transcription-col {
+    width: 45%;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 49.99em) {
+  .dcube-transcription-col {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+.dcube-transcription-col p {
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.dcube-transcription {
+  text-align: left;
+}
+
+.dcube-transcription p {
+  font-size: 0.8em;
 }
