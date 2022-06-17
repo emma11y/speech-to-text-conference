@@ -5813,6 +5813,11 @@ fieldset {
   }
 }
 
+.dcube-demo {
+  position: absolute;
+  width: 100%;
+}
+
 .dcube-transcription-col p {
   text-align: left;
   font-size: 0.8em;
@@ -5824,4 +5829,13 @@ fieldset {
 
 .dcube-transcription p {
   font-size: 0.8em;
+}
+
+.dcube-transcription-col .error {
+  font-weight: 700;
+}
+
+.dcube-transcription-col .error-blank::before {
+  content: " ___ ";
+  font-weight: 700;
 }
