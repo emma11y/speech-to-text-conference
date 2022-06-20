@@ -4276,7 +4276,7 @@ fieldset {
   }
 
   .dcube-title-chapter {
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
 
   .main-title {
@@ -5838,4 +5838,42 @@ fieldset {
 .dcube-transcription-col .error-blank::before {
   content: " ___ ";
   font-weight: 700;
+}
+
+@media screen and (min-width: 50em) {
+  .dcube-merci {
+    display: flex;
+    height: 100%;
+  }
+
+  .dcube-merci div {
+    margin-left: 30px !important;
+  }
+
+  .dcube-merci-img {
+    margin-left: 30px !important;
+    margin-top: 0 !important;
+    width: 125px !important;
+    height: 125px !important;
+    max-height: none !important;
+  }
+}
+
+@media screen and (max-width: 49.99em) {
+  .dcube-merci {
+    display: block;
+    height: 100%;
+  }
+
+  .dcube-merci div {
+    margin-top: 30px !important;
+  }
+
+  .dcube-merci-img {
+    margin-left: auto !important;
+
+    width: 125px !important;
+    height: 125px !important;
+    max-height: none !important;
+  }
 }
