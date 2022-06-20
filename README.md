@@ -18,7 +18,7 @@ Je vais d’abord me présenter. Ça commence mal, ma présentation version spee
 
 C’est d’ailleurs un peu le but de cette conférence. Vous expliquez que la reconnaissance vocale automatique, c’est génial mais pas forcément pour tout le monde.
 
-Qui dans la salle a déjà utilisé la reconnaissance vocale pour sous-titrer ou transcrire ? Qui a réussi à se faire comprendre par l’outil ? Qui n’a pas réussi à se faire comprendre ?
+Qui, dans la salle, a déjà utilisé la reconnaissance vocale pour sous-titrer ou transcrire ? Qui a réussi à se faire comprendre par l’outil ? Qui n’a pas réussi à se faire comprendre ?
 
 Qui a réussi à comprendre ce texte ? 
 
@@ -32,9 +32,10 @@ Un jour, je n’ai pas pu avoir d’interprète à un séminaire de mon entrepri
 
 En première partie, nous avions reçu la visite d’un coach pour parler de l’intelligence émotionnelle. A travers de mon micro Jabra, Microsoft Translator a super bien transcrit ce qu’a dit le coach avec une petite marge d’erreur. On voyait bien que le coach avait l’habitude du public. Il parlait de manière posé et clair de sorte de se faire comprendre par le public et par extension par l’IA. C’était assez impressionnant.
 
-En deuxième partie, ce sont mes managers de mon entreprise qui ont pris la parole. Chacun leur tour, avec leur voix et leur façon de parler, nous avait exposé l’avenir de Dcube. Non seulement la reconnaissance vocale sous-titrait à chaque fois « des cubes », il sous-titrait n’importe quoi. En fait, il est parti en vadrouille avec un mot correct par ci et par là. Mes managers parlaient vite et super excités de nous faire partager leurs visions de l’entreprise dcube.
+En deuxième partie, ce sont mes managers de mon entreprise qui ont pris la parole. Chacun leur tour, avec leur voix et leur façon de parler, nous avait exposé l’avenir de Dcube. Non seulement la reconnaissance vocale sous-titrait à chaque fois « des cubes », il sous-titrait n’importe quoi. En fait, il est parti en vadrouille avec un mot correct par-ci et par-là. Mes managers parlaient vite et super excités de nous faire partager leurs visions de l’entreprise dcube.
 
 Deux expériences totalement différentes m’ont amené à m’interroger. Pourquoi l’IA a très bien compris le coach et pourquoi elle n’a pas compris mes managers ? 
+
 Quand je regarde des vidéos avec les sous-titres automatiques sur YouTube, des fois, les sous-titres sont impeccables, des fois ils ne le sont pas. En fait, c’est complètement aléatoire. Ça dépend de la personne, de sa tonalité, de sa voix, de son débit de vitesse, de son sujet, de son environnement et de son micro. Plusieurs paramètres entrent en compte. Si tous les paramètres sont réunis dans de bonnes conditions, les sous-titres fonctionnent bien.
 
 Je vais vous montrer tout ça.
@@ -53,8 +54,7 @@ Deepgram est une API Speech-To-Text qui monte.
 
 Pour l’utiliser, j’ai créé un compte sur Deepgram qui propose 150$ gratuitement. Après avoir utilisé ce crédit, l’outil devient payant.
 
-Ce code que je vous montre me permet de capter le son du micro activé sur mon navigateur et d’envoyer le contenu stream en WebSocket.
-Dès qu’on obtient une réponse, on a le résultat du stream.
+Ce code, que je vous montre, me permet de capter le son du micro activé sur mon navigateur et d’envoyer le contenu stream en WebSocket. Dès qu’on obtient une réponse, on a le résultat du stream.
 
 #### Google
 
@@ -79,6 +79,7 @@ Ensuite Microsoft. Il faut créer un service « Azure Cognitive Services » sur 
 Grace au package, je n’ai pas eu besoin de coder grand-chose. Il y a tout ce qu’il faut sans que j’ai besoin de requêter. Microsoft va faire le travail tout seul avec ma clé API et ma localisation. Il faut juste faire appel à deux méthodes :
 -	startContinuousRecognitionAsync pour démarrer la transcription en temps réel
 -	stopContinuousRecognitionAsync pour arrêter la transcription en temps réel.
+
 Pendant le processus, on aura la transcription petit à petit.
 
 #### Mozilla
@@ -87,6 +88,7 @@ Et enfin, Mozilla. Mozilla met à disposition son code en open-source avec l’o
 Juste définir les paramètres que j’ai besoin et de faire appel à deux méthodes :
 -	start
 -	stop
+
 On restitue en temps réel le résultat grâce à l’évenement « result ». 
 
 Voilà pour la partie technique, je vous ai montré 4 APIs différents.
@@ -97,7 +99,7 @@ Maintenant passons à la démo. Il y en a 3.
 
 ### Slide 6 – Démo de Samuel
 
-Samuel va lire un texte sur mon site et 4 Apis vont restituer le résultat de ce qu’il dit. Avec un texte simple expliquant ce qu’est le RGAA, les 4 APIS ne donnent jamais les mêmes résultats. 
+Samuel va lire un texte sur mon site et 4 APIs vont restituer le résultat de ce qu’il dit. Avec un texte simple expliquant ce qu’est le RGAA, les 4 APIs ne donnent jamais les mêmes résultats. 
 
 Pour calculer les résultats, j’ai exclu les ponctuations présents dans le texte pré-défini afin d’améliorer le score car je n’ai pas défini de paramètres permettant d’afficher les ponctuations.
 
@@ -131,7 +133,7 @@ Et enfin moi. Je vous préviens les résultats sont complètement différents qu
 - Microsoft 77%.
 - Mozilla 74%.
 
-Tous ont eu du mal à transcrire les mots qui contiennent des « k » ou « que » car j’ai du mal à prononcer ces consonnes correctement. D’un API à l’autre, dès le début, ont eu du mal à savoir si je dis « les » ou « mes » ou encore « accessibles » ou « incessibles ». Tous ont dit « trompé 10 » pour « troubles dys ». Là ou Deepgram et Google ont réussi, Mozilla a fait fort avec « De meilleure qualité », il a transcrit « demi-heure a été ». Microsoft a traduit « lumière ».
+Tous ont eu du mal à transcrire les mots qui contiennent des « k » ou « que » car j’ai du mal à prononcer ces consonnes correctement. D’un API à l’autre, dès le début, ont eu du mal à savoir si je dis « les » ou « mes » ou encore « accessibles » ou « incessibles ». Tous ont dit « trompé 10 » pour « troubles dys ». Là où Deepgram et Google ont réussi, Mozilla a fait fort avec « De meilleure qualité », il a transcrit « demi-heure a été ». Microsoft a traduit « lumière ».
 
 Vous avez pu constater que les résultats sont très différents d’un API à l’autre et d’une personne à l’autre. Pourquoi ?
 
@@ -143,33 +145,35 @@ On va parler donc de biais.
 
 Dans un article écrit en 2016 puis édité en 2020 sur le biais du genre de Speech Recognition de Google, il est dit que les sous-titres automatiques sur YouTube sont plus performants sur les voix masculines que sur les voix féminines.
 
-Dans un même article, d’une autre source, il est également dit que les systèmes de reconnaissance vocale font plus d'erreurs pour les locuteurs noirs que pour les locuteurs blancs.
+Dans un même article, d’une autre source, il est également dit que les systèmes de reconnaissance vocale font plus d'erreurs pour les locuteurs noirs que pour les locuteurs blancs. On retrouve cette problématique dans la reconnaissance faciale.
 
 Dans un autre article écrit en 2019, on se pose également la même question : « pourquoi ce biais existe-t-il ? la raison sous-jacente peut être que les bases de données contiennent beaucoup de données sur les hommes blancs et moins de données sur les voix féminines et minoritaires. Par exemple, les conférences TED sont fréquemment analysées par des spécialistes de la parole, et 70 % des orateurs TED sont des hommes. »
 
 ### Slide 11 – Common Voice
 
-On le voit bien avec le projet Common Voice, mise en place par Mozilla. Voici les statistiques des voix recueillis dans la langue française. On voit bien que depuis 2019, l’échantillon des voix féminines reste aux alentours de 9% à 12%. Le reste des voix proviennent des voix anonymes, on peut donner sa voix sans créer un compte et sans définir son sexe et son âge.
+On le voit bien avec le projet Common Voice, mise en place par Mozilla. Voici les statistiques des voix recueillis dans la langue française. On voit bien que, depuis 2019, l’échantillon des voix féminines reste aux alentours de 9% à 12%. Le reste des voix proviennent des voix anonymes, on peut donner sa voix sans créer un compte et sans définir son sexe et son âge.
 
 Ces statistiques ne précisent pas si on prend en compte les personnes qui ont des voix atypiques, des accents et/ou des troubles de langage.
 
-Ma voix est celle d’une personne sourde. J’ai donc un accent atypique. Je n’ai jamais réussi à me faire comprendre correctement par les assistants vocaux en particulier Siri. Parce que ma voix est atypique.
+Ma voix est celle d’une personne sourde. J’ai donc un accent atypique. Je n’ai jamais réussi à me faire comprendre correctement par les assistants vocaux en particulier Siri parce que ma voix est atypique.
 
 Lorsqu’on essaie de sous-titrer ou transcrire les mots d’une personne ayant un accent, ça part en vadrouille. 
 
 ### Slide 12 – Chaque voix compte
 
-Nous sommes tous différents. Chaque voix est unique. Chaque voix compte. Y compris celles des femmes, des personnes issues de la minorité, des personnes ayant des accents, des voix atypiques ou déformées, des troubles du langage.
+Nous sommes tous différents. Chaque voix est unique. Chaque voix compte y compris celles des femmes, des personnes issues de la minorité, des personnes ayant des accents, des voix atypiques ou déformées, des troubles du langage.
 
 Et pourtant il n’y a pas assez d’échantillons de voix pour transcrire automatiquement correctement les paroles d’une personne.
 
-Apple se sert de sa base de données de podcasts pour affiner sa reconnaissance vocale. Je suppose que Google fait de même avec ses vidéos YouTube. Je me souviens d’il y a quelques années, au tout début des sous-titres automatiques, cela ne fonctionnait absolument pas. Aujourd’hui, en quelques années, les progrès sont impressionnants et sans aucun doute que d’ici quelques années avec davantage de données, la reconnaissance vocale sera encore plus efficace aujourd’hui.
+Apple se sert de sa base de données de podcasts pour affiner sa reconnaissance vocale. Je suppose que Google fait de même avec ses vidéos YouTube. 
+
+Je me souviens d’il y a quelques années, au tout début des sous-titres automatiques, cela ne fonctionnait absolument pas. Aujourd’hui, en quelques années, les progrès sont impressionnants et sans aucun doute que d’ici quelques années avec davantage de données, la reconnaissance vocale sera encore plus efficace aujourd’hui.
 
 Il existe deux projets à ma connaissance qui permet de recueillir les voix atypiques.
 
 Il y a le projet Euphonia de Google qui se focalise sur les voix atypiques pour mieux améliorer la reconnaissance vocale et ses modèles.
 
-Et Voice ITT est une application pour les personnes qui ont des voix non standards. 
+Il y a également l'application Voice ITT destinée pour les personnes qui ont des voix non standards. 
 
 Bien évidemment, on se pose la question sur la vie privée des données vocaux. Est-ce qu’on peut conjuguer la reconnaissance vocale et la protection des données personnelles ? Est-ce qu’en donnant sa voix, on peut garantir l’anonymat de la personne ? 
 
@@ -177,7 +181,9 @@ Pour que les reconnaissances vocaux fonctionnent correctement, on le sait, il fa
 
 ### Slide 13 - La langue française
 
-La langue française est une langue très riche et complexe. Nous avons vu lors de nos trois démos différentes qu’il y a des fautes d’accord de verbe. Maintenant, je vais vous montrer une nouvelle démo avec les mélanges qu’on peut avoir au quotidien.
+La langue française est une langue très riche et complexe. Nous avons vu lors de nos trois démos différentes qu’il y a des fautes d’accord de verbe. 
+
+Maintenant, je vais vous montrer une nouvelle démo avec les mélanges qu’on peut avoir au quotidien.
 
 ### Slide 14 – Nouvelle démo de Samuel 
 
@@ -233,15 +239,15 @@ D’ailleurs, avec Microsoft, par exemple, on peut enrichir le vocabulaire avec 
 
 La conjugaison peut être parfois un casse-tête. 
 
-On l’a bien vu lors de la démo. Annie est une femme et, selon les règles de la conjugaison, on doit accorder le deuxième verbe quand le premier verbe est du verbe être. « Annie est arrivé à la maison ». Il manque le « e ». Quand on dit également « nous, les filles, sommes arrivées à la maison », l’IA n’a pas analysé le contexte de la phrase et du coup, n’a pas accordé le verbe au féminin avec le pluriel.
+On l’a bien vu lors de la démo. Annie est une femme et, selon les règles de la conjugaison, on doit accorder le deuxième verbe quand le premier verbe est du verbe être. « Annie est arrivé à la maison ». Il manque le « e ». Quand on dit également « nous, les filles, sommes arrivées à la maison », l’IA n’a pas analysé le contexte de la phrase et, du coup, n’a pas accordé le verbe au féminin avec le pluriel.
 
-Chez mon entreprise dcube, j’ai un collègue qui s’appelle Hany : H-A-N-Y. Dans mes réunions avec Teams, l’IA transcrit à chaque fois Annie. Comment peut-elle savoir que c’est Hany et non pas Annie ? Même les e-transcripteurs et e-transcriptrices de chez Tadéo font la même erreur.
+Chez mon entreprise dcube, j’ai un collègue qui s’appelle Hany : H-A-N-Y. Dans mes réunions avec Teams, l’IA transcrit à chaque fois Annie. Comment peut-elle savoir que c’est Hany et non pas Annie ? Même les e-transcripteurs et e-transcriptrices de chez Tadéo font également la même erreur.
 
 Mon prénom est unisexe. Comment l’IA peut savoir que c’est Annie ou Hany ou Emmanuelle ou Emmanuel qui parle ? A moins, bien sûr, de définir son sexe dans les paramètres quand on utilise un outil.  
 
-Si on ne définit pas son sexe, doit-on se baser sur le type de voix pour deviner son genre ? Si la voix est aigue, est-ce que c’est une femme qui parle ? Si la voix est grave, est-ce que c’est un homme ? Petit problème, la voix ne permet pas forcément de deviner le sexe de la personne car une femme peut avoir une voix grave tout comme l’homme peut avoir une voix aigue.
+Si on ne définit pas son sexe, doit-on se baser sur le type de voix pour deviner son genre ? Si la voix est aigüe, est-ce que c’est une femme qui parle ? Si la voix est grave, est-ce que c’est un homme ? Petit problème, la voix ne permet pas forcément de deviner le sexe de la personne car une femme peut avoir une voix grave tout comme l’homme peut avoir une voix aigue.
 
-Comme l’anglais est un langage neutre (Neutral Langage), l’IA ne se pose pas ce genre de questions. En anglais, on n’accorde pas les verbes. Mais dans ce cas, faut-il faire une liste de prénoms masculins et féminines pour deviner si c’est un homme ou une femme qui parle ? Les prénoms unisexes comme Dominique et Camille rendent la tâche compliquée.
+Comme l’anglais est un langage neutre (Neutral Langage), l’IA ne se pose pas ce genre de questions. En anglais, on n’accorde pas les verbes. Mais, dans ce cas, faut-il faire une liste de prénoms masculins et féminins pour deviner si c’est un homme ou une femme qui parle ? Les prénoms unisexes comme Dominique et Camille rendent la tâche compliquée.
 
 #### Les mots familiers et grossiers
 
@@ -265,6 +271,8 @@ On voit donc qu’il y a encore du travail : il faut davantage enseigner les sub
 Mais il ne faudrait pas qu’on censure par défaut tous les mots. Il est important pour la personne en particulier la personne sourde ou malentendante de savoir que les mots grossiers ou familiers ont été dites. Nous aussi, on a le droit de savoir. On veut être égaux face aux dires qu’ils soient grossiers ou non. 
 Donc ne masquez pas par défaut ces mots. Laissez-nous la possibilité de choisir si on veut les censurer ou non. On peut le faire sur la dictée vocale de Microsoft mais pas sur Teams ou Google Meet.
 
+Il se peut également que c'est une question de culture. Culturellement, aux Etats-Unis, on censure plus facilement les gros mots qu'en France.
+
 ### Slide 19 - La ponctuation et qui parle ?
 
 #### La ponctuation
@@ -275,7 +283,7 @@ Sachant que le point d’exclamation relève de l’expression de la personne ou
 
 Un autre point sur l’importance de la ponctuation notamment la virgule.
 
-Par exemple, quand on dit  « 3, 4, 5 personnes travaillent sur le sujet », ça va transcrire « 234 personnes travaillent sur le sujet ». La subtilité est là mais on voit bien qu’il y a une grande différence. Ce n’est pas du tout la même chose entre 3 et 300. Est ce que c’est 3 ou 300 personnes qui travaillent sur le sujet ?
+Par exemple, quand on dit  « 3, 4, 5 personnes travaillent sur le sujet », ça va transcrire « 345 personnes travaillent sur le sujet ». La subtilité est là mais on voit bien qu’il y a une grande différence. Ce n’est pas du tout la même chose entre 3 et 300. Est ce que c’est 3 ou 300 personnes qui travaillent sur le sujet ?
 
 Spotify a commencé la transcription automatique sur des podcasts de ses partenaires. Mis en chantier depuis plus d’un an, c’est toujours à l’état d’expérimentation. J’ai pu voir le résultat de ses transcriptions automatiques. Si l’ensemble était plutôt correct, pour moi, il y avait deux problèmes majeures :
 -	Pas de ponctuation. Du coup, j’étais incapable de comprendre ce que je lisais.
@@ -317,6 +325,7 @@ Si vous voulez que la reconnaissance vocale fonctionne bien pour vous :
 -	Soyez près de votre micro (et par la même occasion, ayez un bon micro)
 -	Minimiser les bruits en arrière-plan
 -	Parlez très clairement et pas trop vite
+
 Ces trois points sont importants.
 
 ### Slide 23 – le sous-titrage en temps réel au quotidien
