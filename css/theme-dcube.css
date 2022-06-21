@@ -347,7 +347,7 @@ a {
 
 a,
 *[class*="dcube-bgcolor-"]:not(.dcube-bgcolor-c2):not(.dcube-bgcolor-c5) a {
-  color: #ef5565;
+  color: #b21122;
 }
 
 .high-c a,
@@ -3152,7 +3152,7 @@ label[for="contrastSelect"] {
 .slide:not(.couv):not(.interslide) .dcube-edito .center ul,
 .slide:not(.couv):not(.interslide) .center ol,
 .slide:not(.couv):not(.interslide) .dcube-edito .center ol {
-  max-width: 35em;
+  max-width: 45em;
 }
 
 span.dcube-text-limit {
