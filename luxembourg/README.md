@@ -3,7 +3,7 @@
 ## Support de présentation de la conférence
 
 Retrouvez les slides de la conférence :
-[https://emma11y.github.io/speech-to-text-conference/](https://emma11y.github.io/speech-to-text-conference/)
+[https://emma11y.github.io/speech-to-text-conference/luxembourg](https://emma11y.github.io/speech-to-text-conference/luxembourg)
 
 ## Transcription de la conférence
 

@@ -1,8 +1,15 @@
 # API Speech-To-Text : quelles sont ses avantages et ses limites ?
 
+### Voxxed Days Luxembourg 2021
+
+Retrouvez les slides de la conférence de Voxxed Days Luxembourg :
+[https://emma11y.github.io/speech-to-text-conference/luxembourg](https://emma11y.github.io/speech-to-text-conference/)
+
+Retrouvez la transcription écrite de la conférence de Voxxed Days Luxembourg : [https://github.com/emma11y/speech-to-text-conference/tree/main/luxembourg](https://github.com/emma11y/speech-to-text-conference/tree/main/luxembourg)
+
 ## Support de présentation de la conférence
 
-Retrouvez les slides de la conférence :
+Retrouvez les slides de la conférence de Paris Web :
 [https://emma11y.github.io/speech-to-text-conference/](https://emma11y.github.io/speech-to-text-conference/)
 
 ## Transcription de la conférence
@@ -41,68 +48,11 @@ Quand je regarde des vidéos avec les sous-titres automatiques sur YouTube, des 
 
 Je vais vous montrer tout ça.
 
-### Slide 4 - Un peu de technique
-
-D’abord, nous allons parler un peu de technique. J’ai développé un petit site avec 4 API différents de 4 entreprises américaines : Deepgram, Google, Microsoft et Mozilla. Vous pourrez trouver le code source à la fin de la conférence.
-
-Pourquoi j’ai décidé de créer ce petit site et pourquoi ces 4 APIs ? Le but de ce site est non pas de vous montrer quel est l’outil le plus efficace ou le meilleur mais de vous montrer qu’ils sont tous différents en terme de rendus.
-
-J’ai codé ce site en Angular. Les sources de chaque entreprise sont disponibles en node.js et je l’ai adapté pour Angular.
-
-#### Deepgram
-
-Deepgram est une API Speech-To-Text qui monte.
-
-Pour l’utiliser, j’ai créé un compte sur Deepgram qui propose 150$ gratuitement. Après avoir utilisé ce crédit, l’outil devient payant.
-
-Ce code, que je vous montre, me permet de capter le son du micro activé sur mon navigateur et d’envoyer le contenu stream en WebSocket. Dès qu’on obtient une réponse, on a le résultat du stream.
-
-#### Google
-
-Ensuite, nous avons Google. On connait tous les sous-titres automatiques sur YouTube qui utilisent donc l’API Speech-To-Text.
-Pour l’utiliser, il me fallait créer :
-
-- Un compte sur Google Cloud Platform
-- Activer l’outil « Cloud Speech API »
-- Créer le compte de service pour avoir la clé
-- Définir la variable d’environnement GOOGLE_APPLICATION_CREDENTIALS sur mon PC avec la commande ou PowerShell
-
-Contrairement, aux autres APIs, les résultats de l’API ne se feront pas en temps-réel. Vous comprendrez lors de la démo.
-
-On démarre l’enregistrement et pendant l’enregistrement, le navigateur va capturer tout ce qui est dit. A la fin de l’enregistrement, dès que les données sont disponibles, on va transformer le contenu de la capture audio du navigateur en format base64 pour pouvoir l’envoyer via une requête POST avec ses paramètres. Puis on attend la réponse de la requête pour obtenir la transcription.
-
-#### Microsoft
-
-Ensuite Microsoft. Il faut créer un service « Azure Cognitive Services » sur Azure pour pouvoir faire la transcription.
-
-- Créer la ressource « Speech » avec le service plan et tout ce qui va avec. Vous choisissez le service plan qui correspond à vos besoins et la localisation de votre service. C’est gratuit pour 5 heures par mois avec un seul hébergement.
-- Pour utiliser le service, vous aurez besoin de deux choses : la clé API et la localisation de votre ressource. Ces deux informations se trouvent les paramètres de votre ressource « Keys and Endpoint ».
-- Utiliser le SDK disponible en nodejs microsoft-cognitiveservices-speech-sdk
-
-Grace au package, je n’ai pas eu besoin de coder grand-chose. Il y a tout ce qu’il faut sans que j’ai besoin de requêter. Microsoft va faire le travail tout seul avec ma clé API et ma localisation. Il faut juste faire appel à deux méthodes :
-
-- startContinuousRecognitionAsync pour démarrer la transcription en temps réel
-- stopContinuousRecognitionAsync pour arrêter la transcription en temps réel.
-
-Pendant le processus, on aura la transcription petit à petit.
-
-#### Mozilla
-
-Et enfin, Mozilla. Mozilla met à disposition son code en open-source avec l’objet JavaScript : webkitSpeechRecognition. Je n’ai pas besoin d’API ou de librairie.
-Juste définir les paramètres que j’ai besoin et de faire appel à deux méthodes :
-
-- start
-- stop
-
-On restitue en temps réel le résultat grâce à l’évenement « result ».
-
-Voilà pour la partie technique, je vous ai montré 4 APIs différents.
-
-### Slide 5 - Démos
+### Slide 4 - Démos
 
 Maintenant passons à la démo. Il y en a 3.
 
-### Slide 6 – Démo de Samuel
+### Slide 5 – Démo de Samuel
 
 Samuel va lire un texte sur mon site et 4 APIs vont restituer le résultat de ce qu’il dit. Avec un texte simple expliquant ce qu’est le RGAA, les 4 APIs ne donnent jamais les mêmes résultats.
 
@@ -117,7 +67,7 @@ On a donc :
 
 On voit bien que les sigles peuvent poser problème avec notamment RGAA, la DINUM et troubles dys. Il y a également quelques problèmes d’accord de verbes.
 
-### Slide 7 – Démo de Anne-Laure
+### Slide 6 – Démo de Anne-Laure
 
 Ensuite, c’est au tour de Anne-Laure.
 
@@ -129,7 +79,7 @@ Anne-Laure, pour un même texte, a fait un peu mieux ou un peu moins bien sur ce
 
 Là aussi, il y a des erreurs avec les sigles et des accords de verbes.
 
-### Slide 8 – Démo d’Emmanuelle
+### Slide 7 – Démo d’Emmanuelle
 
 Et enfin moi. Je vous préviens les résultats sont complètement différents quand c’est moi qui parle avec mon accent de personne sourde.
 
@@ -141,6 +91,10 @@ Et enfin moi. Je vous préviens les résultats sont complètement différents qu
 Tous ont eu du mal à transcrire les mots qui contiennent des « k » ou « que » car j’ai du mal à prononcer ces consonnes correctement. D’un API à l’autre, dès le début, ont eu du mal à savoir si je dis « les » ou « mes » ou encore « accessibles » ou « incessibles ». Tous ont dit « trompé 10 » pour « troubles dys ». Là où Deepgram et Google ont réussi, Mozilla a fait fort avec « De meilleure qualité », il a transcrit « demi-heure a été ». Microsoft a traduit « lumière ».
 
 Vous avez pu constater que les résultats sont très différents d’un API à l’autre et d’une personne à l’autre. Pourquoi ?
+
+### Slide 8 -
+
+[A rédiger]
 
 ### Slide 9 – Biais
 
@@ -241,9 +195,7 @@ D’ailleurs quand on utilise les mots anglais dans des phrases en français, l�
 
 D’ailleurs, avec Microsoft, par exemple, on peut enrichir le vocabulaire avec son service Custom Speech.
 
-### Slide 17 - La conjugaison et les mots grossiers ou familiers
-
-#### La conjugaison
+### Slide 17 - La conjugaison
 
 La conjugaison peut être parfois un casse-tête.
 
@@ -257,7 +209,7 @@ Si on ne définit pas son sexe, doit-on se baser sur le type de voix pour devine
 
 Comme l’anglais est un langage neutre (Neutral Langage), l’IA ne se pose pas ce genre de questions. En anglais, on n’accorde pas les verbes. Mais, dans ce cas, faut-il faire une liste de prénoms masculins et féminins pour deviner si c’est un homme ou une femme qui parle ? Les prénoms unisexes comme Dominique et Camille rendent la tâche compliquée.
 
-#### Les mots familiers et grossiers
+### Slide 18 - Les mots familiers et grossiers
 
 Je vais aborder le sujet des mots familiers et grossiers. Quand j’utilise Teams, je n’ai pas la possibilité de choisir si je veux que les mots grossiers ou familiers soient censurés.
 
@@ -308,9 +260,9 @@ Mais si, dans la même salle de réunion avec plusieurs personnes, on utilise qu
 
 D’ailleurs sur ce point, l’équipe de France TV Lab (je parlerai de ce projet dans les prochains slides) a reconnu la difficulté de détecter le changement de voix à cause du changement de ton ou de la puissance de la voix suivant la réaction de la personne qui parle.
 
-### Slide 19 - Conclusion
+### Slide 20 - Conclusion
 
-### Slide 20 - AI is good but it’s not that good !
+### Slide 21 - AI is good but it’s not that good !
 
 Tout ça pour vous dire que la reconnaissance vocale n’est pas parfaite et est loin de l’être. D’ailleurs, Tim Cook l’a bien dit lors de son intervention à l’université Gallaudet en mai 2022.
 
@@ -318,7 +270,7 @@ Tout ça pour vous dire que la reconnaissance vocale n’est pas parfaite et est
 
 Ce qui signifie que l’IA est bon mais pas encore à ce point.
 
-### Slide 21 – Mélanger l’intelligence artificielle et l’intelligence humaine
+### Slide 22 – Mélanger l’intelligence artificielle et l’intelligence humaine
 
 En effet, pour améliorer les sous-titres automatiques ou la transcription automatique, il faut encore l’intervention humaine. Il faut donc mélanger l’intelligence artificielle et l’intelligence humaine pour rendre l’expérience encore meilleure.
 
@@ -328,7 +280,7 @@ Je vous liste tous les outils existants dans un document que vous trouverez dans
 
 Utiliser les outils automatiques vous permet de gagner énormément du temps : vous n’avez pas à réaliser vos sous-titres et à les synchroniser. Il vous reste qu’à corriger. La correction peut prendre du temps si les erreurs de l’IA sont nombreuses à cause de la voix de la personne.
 
-### Slide 22 - Reconnaissance vocale
+### Slide 23 - Reconnaissance vocale
 
 Si vous voulez que la reconnaissance vocale fonctionne bien pour vous :
 
@@ -338,13 +290,13 @@ Si vous voulez que la reconnaissance vocale fonctionne bien pour vous :
 
 Ces trois points sont importants.
 
-### Slide 23 – le sous-titrage en temps réel au quotidien
+### Slide 24 – le sous-titrage en temps réel au quotidien
 
 Aujourd’hui, on ne manque pas d’outils automatiques. Ils sont même très présents au quotidien.
 
 En plus des sous-titres automatiques qu’on trouve sur Youtube, on peut trouver pleins d’outils permettant de dicter, de transcrire et de sous-titrer les vidéos, les podcasts, des notes et même les conversations et conférences.
 
-### Slide 24 - Critères
+### Slide 25 - Critères
 
 Sur l’accessibilité des contenus vidéos et audios, il existe des critères RGAA. RGAA est le référentiel général d’amélioration de l’accessibilité.
 Sur ces 4 critères, il est préconisé de mettre les sous-titres sur les contenus vidéos et de fournir des transcriptions écrites sur les contenus audios.
@@ -352,7 +304,7 @@ Sur ces 4 critères, il est préconisé de mettre les sous-titres sur les conten
 Quant à la règle 116 d’Opquast sur la charte qualité web, il est également préconisé de fournir une transcription textuelle à chaque contenu audio et vidéo.
 Attention, ces critères ne sont pas valides si vous fournissez les sous-titres et transcriptions écrites automatiques tant qu’ils ne sont pas corrigés.
 
-### Slide 25 – France TV Lab
+### Slide 26 – France TV Lab
 
 En bonus, actuellement France TV Lab expérimente les sous-titres automatiques sur France Info, le journal en continu. Selon la loi, les chaînes de télévision ayant une audience de 2,5% doivent sous-titrer 100% de leur programme. C’est un peu difficile pour les journaux en continu d’où les expérimentations de France TV Lab. Les résultats de leur expérimentation sont très encourageants.
 
@@ -360,13 +312,17 @@ Vous pouvez voir sur cette démo que les sous-titres automatiques fonctionnent t
 
 Je suis très optimiste de l’avenir et des possibilités que nous offrent la reconnaissance vocale. Il y a encore énormément de travail mais pour l’instant, on a encore besoin de l’intelligence humaine pour que les sous-titres soient efficaces.
 
-### Slide 26 – Ressources
+### Slide 27 – Ressources techniques
 
 Voici toutes les ressources utilisées pendant ma présentation.
 
 Vous trouverez les ressources comment j’ai créé les 4 API en Angular. Vous trouverez également les informations sur différents projets que j’ai cité pendant ma présentation ainsi que les différents sources qui m’ont permis de faire cette présentation.
 
-### Slide 27 - Merci
+### Slide 28 - Autres ressources
+
+[A rediger]
+
+### Slide 29 - Merci
 
 Vous pouvez retrouver ma présentation ainsi que la transcription écrite de ma présentation.
 
