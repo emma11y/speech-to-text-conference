@@ -92,15 +92,11 @@ Tous ont eu du mal à transcrire les mots qui contiennent des « k » ou « que 
 
 Vous avez pu constater que les résultats sont très différents d’un API à l’autre et d’une personne à l’autre. Pourquoi ?
 
-### Slide 8 -
-
-[A rédiger]
-
-### Slide 9 – Biais
+### Slide 8 – Biais
 
 On va parler donc de biais.
 
-### Slide 10 – Problème de biais
+### Slide 9 – Problème de biais
 
 Dans un article écrit en 2016 puis édité en 2020 sur le biais du genre de Speech Recognition de Google, il est dit que les sous-titres automatiques sur YouTube sont plus performants sur les voix masculines que sur les voix féminines.
 
@@ -108,7 +104,7 @@ Dans un même article, d’une autre source, il est également dit que les syst�
 
 Dans un autre article écrit en 2019, on se pose également la même question : « pourquoi ce biais existe-t-il ? la raison sous-jacente peut être que les bases de données contiennent beaucoup de données sur les hommes blancs et moins de données sur les voix féminines et minoritaires. Par exemple, les conférences TED sont fréquemment analysées par des spécialistes de la parole, et 70 % des orateurs TED sont des hommes. »
 
-### Slide 11 – Common Voice
+### Slide 10 – Common Voice
 
 On le voit bien avec le projet Common Voice, mise en place par Mozilla. Voici les statistiques des voix recueillis dans la langue française. On voit bien que, depuis 2019, l’échantillon des voix féminines reste aux alentours de 9% à 12%. Le reste des voix proviennent des voix anonymes, on peut donner sa voix sans créer un compte et sans définir son sexe et son âge.
 
@@ -118,7 +114,7 @@ Ma voix est celle d’une personne sourde. J’ai donc un accent atypique. Je n�
 
 Lorsqu’on essaie de sous-titrer ou transcrire les mots d’une personne ayant un accent, ça part en vadrouille.
 
-### Slide 12 – Chaque voix compte
+### Slide 11 – Chaque voix compte
 
 Nous sommes tous différents. Chaque voix est unique. Chaque voix compte y compris celles des femmes, des personnes issues de la minorité, des personnes ayant des accents, des voix atypiques ou déformées, des troubles du langage.
 
@@ -138,13 +134,13 @@ Bien évidemment, on se pose la question sur la vie privée des données vocaux.
 
 Pour que les reconnaissances vocaux fonctionnent correctement, on le sait, il faut collecter des heures et des heures de parole pour chaque langue. L’institut INRIA fait des études sur ce sujet avec le projet Multi Speech.
 
-### Slide 13 - La langue française
+### Slide 12 - La langue française
 
 La langue française est une langue très riche et complexe. Nous avons vu lors de nos trois démos différentes qu’il y a des fautes d’accord de verbe.
 
 Maintenant, je vais vous montrer une nouvelle démo avec les mélanges qu’on peut avoir au quotidien.
 
-### Slide 14 – Nouvelle démo de Samuel
+### Slide 13 – Nouvelle démo de Samuel
 
 Voici une nouvelle démo de Samuel.
 
@@ -169,7 +165,7 @@ Les plus marquants sont :
 
 Pourquoi ? Nous allons décortiquer tout ça.
 
-### Slide 15 - La langue française
+### Slide 14 - La langue française
 
 Mais n’oublions pas que les 4 APIs (Deepgram, Google, Microsoft et Mozilla) sont tous des produits américains. Leur langue d’origine est l’anglais.
 
@@ -177,7 +173,7 @@ Le français est une langue riche et complexe avec ses règles de grammaire, de 
 
 La langue comporte également des noms communs, des noms propres, des acronymes, des langages techniques, métiers et fonctionnels ainsi que les termes franco-anglais et le verlan.
 
-### Slide 16 – Quelques perles des sous-titres automatiques
+### Slide 15 – Quelques perles des sous-titres automatiques
 
 D’ailleurs quand on utilise les mots anglais dans des phrases en français, l’IA aura du mal à savoir si on parle français ou anglais dans une même phrase. Ça a donné à des résultats assez concasses d’ailleurs :
 
@@ -195,7 +191,7 @@ D’ailleurs quand on utilise les mots anglais dans des phrases en français, l�
 
 D’ailleurs, avec Microsoft, par exemple, on peut enrichir le vocabulaire avec son service Custom Speech.
 
-### Slide 17 - La conjugaison
+### Slide 16 - La conjugaison
 
 La conjugaison peut être parfois un casse-tête.
 
@@ -209,7 +205,7 @@ Si on ne définit pas son sexe, doit-on se baser sur le type de voix pour devine
 
 Comme l’anglais est un langage neutre (Neutral Langage), l’IA ne se pose pas ce genre de questions. En anglais, on n’accorde pas les verbes. Mais, dans ce cas, faut-il faire une liste de prénoms masculins et féminins pour deviner si c’est un homme ou une femme qui parle ? Les prénoms unisexes comme Dominique et Camille rendent la tâche compliquée.
 
-### Slide 18 - Les mots familiers et grossiers
+### Slide 17 - Les mots familiers et grossiers
 
 Je vais aborder le sujet des mots familiers et grossiers. Quand j’utilise Teams, je n’ai pas la possibilité de choisir si je veux que les mots grossiers ou familiers soient censurés.
 
@@ -233,7 +229,7 @@ Donc ne masquez pas par défaut ces mots. Laissez-nous la possibilité de choisi
 
 Il se peut également que c'est une question de culture. Culturellement, aux Etats-Unis, on censure plus facilement les gros mots qu'en France.
 
-### Slide 19 - La ponctuation et qui parle ?
+### Slide 18 - La ponctuation et qui parle ?
 
 #### La ponctuation
 
@@ -260,9 +256,9 @@ Mais si, dans la même salle de réunion avec plusieurs personnes, on utilise qu
 
 D’ailleurs sur ce point, l’équipe de France TV Lab (je parlerai de ce projet dans les prochains slides) a reconnu la difficulté de détecter le changement de voix à cause du changement de ton ou de la puissance de la voix suivant la réaction de la personne qui parle.
 
-### Slide 20 - Conclusion
+### Slide 19 - Conclusion
 
-### Slide 21 - AI is good but it’s not that good !
+### Slide 20 - AI is good but it’s not that good !
 
 Tout ça pour vous dire que la reconnaissance vocale n’est pas parfaite et est loin de l’être. D’ailleurs, Tim Cook l’a bien dit lors de son intervention à l’université Gallaudet en mai 2022.
 
@@ -270,7 +266,7 @@ Tout ça pour vous dire que la reconnaissance vocale n’est pas parfaite et est
 
 Ce qui signifie que l’IA est bon mais pas encore à ce point.
 
-### Slide 22 – Mélanger l’intelligence artificielle et l’intelligence humaine
+### Slide 21 – Mélanger l’intelligence artificielle et l’intelligence humaine
 
 En effet, pour améliorer les sous-titres automatiques ou la transcription automatique, il faut encore l’intervention humaine. Il faut donc mélanger l’intelligence artificielle et l’intelligence humaine pour rendre l’expérience encore meilleure.
 
@@ -280,7 +276,7 @@ Je vous liste tous les outils existants dans un document que vous trouverez dans
 
 Utiliser les outils automatiques vous permet de gagner énormément du temps : vous n’avez pas à réaliser vos sous-titres et à les synchroniser. Il vous reste qu’à corriger. La correction peut prendre du temps si les erreurs de l’IA sont nombreuses à cause de la voix de la personne.
 
-### Slide 23 - Reconnaissance vocale
+### Slide 22 - Reconnaissance vocale
 
 Si vous voulez que la reconnaissance vocale fonctionne bien pour vous :
 
@@ -290,13 +286,13 @@ Si vous voulez que la reconnaissance vocale fonctionne bien pour vous :
 
 Ces trois points sont importants.
 
-### Slide 24 – le sous-titrage en temps réel au quotidien
+### Slide 23 – le sous-titrage en temps réel au quotidien
 
 Aujourd’hui, on ne manque pas d’outils automatiques. Ils sont même très présents au quotidien.
 
 En plus des sous-titres automatiques qu’on trouve sur Youtube, on peut trouver pleins d’outils permettant de dicter, de transcrire et de sous-titrer les vidéos, les podcasts, des notes et même les conversations et conférences.
 
-### Slide 25 - Critères
+### Slide 24 - Critères
 
 Sur l’accessibilité des contenus vidéos et audios, il existe des critères RGAA. RGAA est le référentiel général d’amélioration de l’accessibilité.
 Sur ces 4 critères, il est préconisé de mettre les sous-titres sur les contenus vidéos et de fournir des transcriptions écrites sur les contenus audios.
@@ -304,7 +300,7 @@ Sur ces 4 critères, il est préconisé de mettre les sous-titres sur les conten
 Quant à la règle 116 d’Opquast sur la charte qualité web, il est également préconisé de fournir une transcription textuelle à chaque contenu audio et vidéo.
 Attention, ces critères ne sont pas valides si vous fournissez les sous-titres et transcriptions écrites automatiques tant qu’ils ne sont pas corrigés.
 
-### Slide 26 – France TV Lab
+### Slide 25 – France TV Lab
 
 En bonus, actuellement France TV Lab expérimente les sous-titres automatiques sur France Info, le journal en continu. Selon la loi, les chaînes de télévision ayant une audience de 2,5% doivent sous-titrer 100% de leur programme. C’est un peu difficile pour les journaux en continu d’où les expérimentations de France TV Lab. Les résultats de leur expérimentation sont très encourageants.
 
@@ -312,17 +308,19 @@ Vous pouvez voir sur cette démo que les sous-titres automatiques fonctionnent t
 
 Je suis très optimiste de l’avenir et des possibilités que nous offrent la reconnaissance vocale. Il y a encore énormément de travail mais pour l’instant, on a encore besoin de l’intelligence humaine pour que les sous-titres soient efficaces.
 
-### Slide 27 – Ressources techniques
+### Slide 26 – Ressources techniques
 
-Voici toutes les ressources utilisées pendant ma présentation.
+Voici toutes les ressources techniques utilisées pendant ma présentation.
 
 Vous trouverez les ressources comment j’ai créé les 4 API en Angular. Vous trouverez également les informations sur différents projets que j’ai cité pendant ma présentation ainsi que les différents sources qui m’ont permis de faire cette présentation.
 
-### Slide 28 - Autres ressources
+Si vous rencontrez des difficultés à implémenter une API, vous pouvez utiliser Eden AI qui fait le job pour vous.
 
-[A rediger]
+### Slide 27 - Autres ressources
 
-### Slide 29 - Merci
+Voici également les ressources non techniques qui peuvent vous intéresser notamment les articles sur les biais et les projets existants pour améliorer la reconnaissance vocale.
+
+### Slide 28 - Merci
 
 Vous pouvez retrouver ma présentation ainsi que la transcription écrite de ma présentation.
 
