@@ -5914,7 +5914,7 @@ fieldset {
 .dcube-quote {
   max-width: 100%;
   margin: 50px auto;
-  padding: 1em 0em;
+  padding: 1em;
 }
 
 @media screen and (max-width: 69.99em) {
